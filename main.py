@@ -10,6 +10,7 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
+
 @app.route('/greet', methods=['GET', 'POST'])
 def greet():
     # submit button has been pushed
@@ -19,6 +20,8 @@ def greet():
             return render_template("greet.html", nickname=name)
     # starting and empty input default
     return render_template("greet.html", nickname="World")
+
+
 # connects /kangaroos path to render kangaroos.html
 @app.route('/kangaroos/')
 def kangaroos():
@@ -38,6 +41,12 @@ def hawkers():
 @app.route('/stub/')
 def stub():
     return render_template("stub.html")
+
+
+@app.route('/raiden/')
+def raiden():
+    return render_template("raiden.html")
+
 
 # runs the application on the development server
 if __name__ == "__main__":
