@@ -59,6 +59,11 @@ def brian():
     return render_template("brian.html", nickname="World")
 
 
+@app.route('/Connor/')
+def connor():
+    return render_template("Connor.html")
+
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
