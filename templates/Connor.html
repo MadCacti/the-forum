@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "layouts/base.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>About me: Connor Wang</title>
+</head>
+{% set project = "Connor" %}
+
+{% block body %}
+    <p>Hey! I'm Connor Wang, and I am an AP Computer Science Principles student at Del Norte High School.</p>
+{% endblock %}
+{% block background %}
+    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
+    <script>
+        VANTA.HALO({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00
+        })
+    </script>
+{% endblock %}
+</html>
