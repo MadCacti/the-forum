@@ -74,9 +74,12 @@ def connor():
     # starting and empty input default
     return render_template("Connor.html", nickname="World")
 
-@app.route('/Jacob/')
+@app.route('/Jacob/', methods=['GET', 'Post'])
 def jacob():
-    return render_template("Jacob.html")
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:
+            return render_template("Jacob.html", nickname = name)
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
