@@ -43,9 +43,15 @@ def stub():
     return render_template("stub.html")
 
 
-@app.route('/raiden/')
+@app.route('/raiden', methods=['GET', 'POST'])
 def raiden():
-    return render_template("raiden.html")
+    # submit button has been pushed
+    if request.form:
+        namer = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("raiden.html", funnyname=namer)
+    # starting and empty input default
+    return render_template("raiden.html", funnyname="World")
 
 
 @app.route('/brian', methods=['GET', 'POST'])
