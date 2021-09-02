@@ -47,9 +47,9 @@ def stub():
 def raiden():
     # submit button has been pushed
     if request.form:
-        namer = request.form.get("name")
+        name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("raiden.html", funnyname=namer)
+            return render_template("raiden.html", funnyname=name)
     # starting and empty input default
     return render_template("raiden.html", funnyname="World")
 
