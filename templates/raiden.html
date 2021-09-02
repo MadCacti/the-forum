@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% extends "layouts/base.html" %}
-
-<head>
-    <meta charset="UTF-8">
-    <title>About me: Raiden Tung</title>
-</head>
-{% set project = "Raiden" %}
+{% set project = "raiden" %}
 
 {% block body %}
     <p>Hey! I'm Raiden Tung, and am currently a junior at Del Norte.</p>
@@ -15,7 +10,7 @@
             <p>Hello, {{funnyname}}!</p>
         </div>
         <div class="col-12">
-            <form action="/raiden" id="greet" method="POST" >
+            <form action="/raiden/" id="greet" method="POST" >
                 <label for="name">Type a greeting name?</label>
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">

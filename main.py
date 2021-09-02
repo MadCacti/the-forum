@@ -43,12 +43,12 @@ def stub():
     return render_template("stub.html")
 
 
-@app.route('/raiden', methods=['GET', 'POST'])
+@app.route('/raiden/', methods=['GET', 'POST'])
 def raiden():
     # submit button has been pushed
     if request.form:
         namer = request.form.get("name")
-        if len(name) != 0:  # input field has content
+        if len(namer) != 0:  # input field has content
             return render_template("raiden.html", funnyname=namer)
     # starting and empty input default
     return render_template("raiden.html", funnyname="World")
@@ -69,7 +69,9 @@ def brian():
 def connor():
     return render_template("Connor.html")
 
-
+@app.route('/Jacob/')
+def jacob():
+    return render_template("Jacob.html")
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
