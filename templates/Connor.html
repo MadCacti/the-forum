@@ -1,27 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#{% extends "layouts/base.html" %}#}
+
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>About me: Brian Tang</title>#}
+{#</head>#}
+{#{% set project = "Brian" %}#}
+
+
 {% extends "layouts/base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>About me: Connor Wang</title>
-</head>
 {% set project = "Connor" %}
 
 {% block body %}
-    <p>Hey! I'm Connor Wang, and I am an AP Computer Science Principles student at Del Norte High School.</p>
+    {#    <p>I am Connor and I am a junior and AP CSP student at Del Norte</p>#}
+    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
+        <div class="col-12">
+            <p>Hello, {{nickname}}!</p>
+        </div>
+        <div class="col-12">
+            <form action="/Connor/" id="greet" method="POST" >
+                <label for="name">Type a greeting name?</label>
+                <input name="name" id="name">
+                <input type="submit" value="Greetings!">
+            </form>
+        </div>
+    </div>
 {% endblock %}
 {% block background %}
     <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.halo.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.net.min.js') }}"></script>
     <script>
-        VANTA.HALO({
+        VANTA.NET({
             el: "body",
             mouseControls: true,
             touchControls: true,
             gyroControls: false,
             minHeight: 200.00,
-            minWidth: 200.00
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00
         })
     </script>
 {% endblock %}
