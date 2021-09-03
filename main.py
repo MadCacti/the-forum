@@ -43,13 +43,13 @@ def stub():
     return render_template("stub.html")
 
 
-@app.route('/raiden', methods=['GET', 'POST'])
+@app.route('/raiden/', methods=['GET', 'POST'])
 def raiden():
     # submit button has been pushed
     if request.form:
-        name = request.form.get("name")
-        if len(name) != 0:  # input field has content
-            return render_template("raiden.html", funnyname=name)
+        namer = request.form.get("name")
+        if len(namer) != 0:  # input field has content
+            return render_template("raiden.html", funnyname=namer)
     # starting and empty input default
     return render_template("raiden.html", funnyname="World")
 
@@ -64,12 +64,22 @@ def brian():
     # starting and empty input default
     return render_template("brian.html", nickname="World")
 
-
-@app.route('/Connor/')
+@app.route('/Connor/', methods=['GET', 'POST'])
 def connor():
-    return render_template("Connor.html")
+    # submit button has been pushed
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("Connor.html", nickname=name)
+    # starting and empty input default
+    return render_template("Connor.html", nickname="World")
 
-
+@app.route('/Jacob/', methods=['GET', 'Post'])
+def jacob():
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:
+            return render_template("Jacob.html", nickname = name)
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)

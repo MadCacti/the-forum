@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% extends "layouts/base.html" %}
-
-<head>
-    <meta charset="UTF-8">
-    <title>About me: Raiden Tung</title>
-</head>
-{% set project = "Raiden" %}
+{% set project = "raiden" %}
 
 {% block body %}
     <h2 style="background-color:rgba(0, 0, 0, 0.267);">Hey! I'm Raiden Tung, and am currently a junior at Del Norte. I enjoy soccer, computers, games, and hanging out with friends!</h2>
@@ -15,7 +10,7 @@
             <p>Hello, {{funnyname}}!</p>
         </div>
         <div class="col-12">
-            <form action="/raiden" id="greet" method="POST" >
+            <form action="/raiden/" id="greet" method="POST" >
                 <label for="name">Type a greeting name?</label>
                 <input name="name" id="name">
                 <input type="submit" value="Greetings!">
@@ -37,7 +32,7 @@ VANTA.WAVES({
   scale: 1.00,
   scaleMobile: 1.00,
   color: 0x24292d,
-  shininess: 150.00,
+  shininess: 500.00,
   waveHeight: 22.00,
   waveSpeed: 1.15,
   zoom: 0.70
