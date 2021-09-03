@@ -14,7 +14,7 @@
 {% set project = "brian" %}
 
 {% block body %}
-{#    <p>I am Brian and I am a junior at Del Norte</p>#}
+    <p>I am Brian and I am a junior at Del Norte. My hobbies include playing tennis and spending time with friends.</p>
     <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
         <div class="col-12">
             <p>Hello, {{nickname}}!</p>
@@ -30,9 +30,9 @@
 {% endblock %}
 {% block background %}
     <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='vanta.net.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.waves.min.js') }}"></script>
     <script>
-        VANTA.NET({
+        VANTA.WAVES({
             el: "body",
             mouseControls: true,
             touchControls: true,
@@ -40,6 +40,7 @@
             minHeight: 200.00,
             minWidth: 200.00,
             scale: 1.00,
+            color: 0x1292d,
             scaleMobile: 1.00
         })
     </script>
