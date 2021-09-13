@@ -1,4 +1,15 @@
-## Project Credits
+Table of contents
+=================
+
+<!--ts-->
+* [Credits](#credits)
+* [Runtime Link(when done)](#runtime_link)
+* [Sprint 2 Week 2](#sprint_2_week_2)
+* [Sprint 3 Week 3](#sprint_3_week_3)
+<!--te-->
+
+Credits
+=======
 
 - [Team Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1)
 - [Team Insight Graphs](https://github.com/MadCacti/flask_portfolio/graphs/contributors)
@@ -38,7 +49,7 @@ Developers. Integration of Video Journal 0 into a mini-lab page | [Video Journal
 Requirements | Evidence |
 ----------- | ----------- |
 Issues | Raiden was absent this week, therefore will need to do some team catchup.
-Review binary | Binary Numbers: What binary numbers are and how they are used. All the media that we see in modern devices are made from millions of simple on/off switches *full notes found in journal*|
+Review binary | Binary Numbers: What are they and how they can be used in the real world in computers and programs|
 
 
 
