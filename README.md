@@ -6,9 +6,9 @@
 
 Contributor | GitHub | Tasks | Scrum Board | Commit | Journal Links
 ----------- | ----------- | ------------- | ------------- | ------------- | -------------
-Raiden Tung | [@MadCacti](https://github.com/MadCacti) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1)  | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=MadCacti) |[Raiden and Brian's Journal](https://docs.google.com/document/d/18m2DBuJrDUOoWUPMxL7_-LjTvGnrwFLhQMYxaZReocM/edit?usp=sharing)
+Raiden Tung | [@MadCacti](https://github.com/MadCacti) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1)  | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=MadCacti) |[Raiden and Brian's Journal](https://docs.google.com/document/d/1OjLfeJXQ_Kz3UwXXRvyhoTs1HdUW4_eGtuCCWkX6Xq4/edit)
 Brian Tang | [@bgt072105](https://github.com/bgt072105) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1) | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=bgt072105) 
-Connor Wang | [@cwang999](https://github.com/cwang999) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1) | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=cwang999) | [Connor and Jacob's Journal](https://docs.google.com/document/d/1c5PIYwjII7IuVlCnkpn-ORHjwLj-XQIN5B2BWxP6aOw/edit?usp=sharing)
+Connor Wang | [@cwang999](https://github.com/cwang999) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1) | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=cwang999) | [Connor and Jacob's Journal](https://docs.google.com/document/d/1-R8S9MEu5mPPw0zFgESQjqUhEfASbBsncqbfxTgUX6E/edit)
 Jacob Rozenkrants | [@jar04](https://github.com/jar04) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1) | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=jar04) | 
 
 
