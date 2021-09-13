@@ -3,9 +3,9 @@ Table of contents
 
 <!--ts-->
 * [Credits](#credits)
-* [Runtime Link(when done)](#runtime_link)
-* [Sprint 2 Week 2](#sprint_2_week_2)
-* [Sprint 3 Week 3](#sprint_3_week_3)
+* [Runtime Link(when done)](#runtime)
+* [Sprint 2 Week 2](#sprint-2-week-2)
+* [Sprint 3 Week 3](#sprint-3-week-3)
 <!--te-->
 
 Credits
@@ -26,13 +26,14 @@ Jacob Rozenkrants | [@jar04](https://github.com/jar04) | [Tasks](https://github.
 
 
 
-**Runtime Link**: TBD
-
+Runtime
+=================
+link to be added
 ## Sprint 1 Week 2
 
 
-## Sprint 2 Week 2
-
+Sprint-2-Week-2
+===================
 Requirements | Evidence |
 ----------- | ----------- |
 Scrum Master. Define tasks and place assignments to in-progress on the Scrum board.  | [Scrum Board](https://github.com/MadCActi/flask_portfolio/projects/1) |
@@ -44,8 +45,8 @@ Developers. Integration of Greet like functionality into a mini-lab page | Added
 Developers. Integration of Video Journal 0 into a mini-lab page | [Video Journal 0 embedded into portfolio](https://www.youtube.com/playlist?list=PLq5N5__AYvxqlz5qP-F1AlRSlRIz2eByY)
 
 
-## Sprint 3 Week 3
-
+Sprint-3-Week-3
+===================
 Requirements | Evidence |
 ----------- | ----------- |
 Issues | Raiden was absent this week, therefore will need to do some team catchup.
