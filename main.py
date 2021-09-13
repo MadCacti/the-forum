@@ -75,6 +75,15 @@ def Jacob():
 def binary():
     return render_template("binary.html")
 
+@app.route('/greet', methods=['GET', 'Post'])
+def greet():
+    if request.form:
+        name = request.form.get("name")
+        if len(name) != 0:  # input field has content
+            return render_template("greet.html", nickname=name)
+    # starting and empty input default
+    return render_template("greet.html", nickname="World")
+
 # runs the application on the development server
 if __name__ == "__main__":
     app.run(debug=True)
