@@ -49,7 +49,7 @@ Sprint-3-Week-3
 ===================
 Requirements | Evidence |
 ----------- | ----------- |
-Issues | Raiden was absent this week, therefore will need to do some team catchup.
+Note: | Raiden was absent this week, therefore will need to do some team catchup. He will add the minute update journal when done.
 Review binary | Binary Numbers: What are they and how they can be used in the real world in computers and programs|
 
 
