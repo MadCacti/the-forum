@@ -8,34 +8,32 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-
-    <div class="topnav-centered">
-
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav">
-        -->
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">About Us</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li> <a class="dropdown-item" href="/raiden">Raiden</a></li>
-                <li> <a class="dropdown-item" href="/brian">Brian</a></li>
-                <li> <a class="dropdown-item" href="/Connor">Connor</a></li>
-                <li> <a class="dropdown-item" href="/Jacob">Jacob</a></li>
-            </ul>
-        </ul>
-        </div>
-    </div>
-    <div class="topnav-centered">
-
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <ul class="nav navbar-nav">
-            -->
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton2" type="button">Mini-Labs</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                <li> <a class="dropdown-item" href="/greet">Greet Project</a></li>
-                <li> <a class="dropdown-item" href="/binary">Binary</a></li>
-            </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About Us</a>
+                <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                    <a class="dropdown-item" href="/raiden">Raiden</a>
+                    <a class="dropdown-item" href="/brian">Brian</a>
+                    <a class="dropdown-item" href="/Connor">Connor</a>
+                    <a class="dropdown-item" href="/Jacob">Jacob</a>
+                </div>
+            </li>
         </ul>
     </div>
-    </div>
 
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mini-Labs</a>
+                <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
+                    <a class="dropdown-item" href="/greet">Greet</a>
+                    <a class="dropdown-item" href="/Binary">Binary</a>
+                </div>
+            </li>
+        </ul>
+    </div>
 </nav>
