@@ -1,4 +1,15 @@
-## Project Credits
+Table of contents
+=================
+
+<!--ts-->
+* [Credits](#credits)
+* [Runtime Link(when done)](#runtime)
+* [Sprint 2 Week 2](#sprint-2-week-2)
+* [Sprint 3 Week 3](#sprint-3-week-3)
+<!--te-->
+
+Credits
+=======
 
 - [Team Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1)
 - [Team Insight Graphs](https://github.com/MadCacti/flask_portfolio/graphs/contributors)
@@ -6,22 +17,23 @@
 
 Contributor | GitHub | Tasks | Scrum Board | Commit | Journal Links
 ----------- | ----------- | ------------- | ------------- | ------------- | -------------
-Raiden Tung | [@MadCacti](https://github.com/MadCacti) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1)  | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=MadCacti) |[Raiden and Brian's Journal](https://docs.google.com/document/d/18m2DBuJrDUOoWUPMxL7_-LjTvGnrwFLhQMYxaZReocM/edit?usp=sharing)
+Raiden Tung | [@MadCacti](https://github.com/MadCacti) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1)  | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=MadCacti) |[Raiden and Brian's Journal](https://docs.google.com/document/d/1OjLfeJXQ_Kz3UwXXRvyhoTs1HdUW4_eGtuCCWkX6Xq4/edit)
 Brian Tang | [@bgt072105](https://github.com/bgt072105) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1) | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=bgt072105) 
-Connor Wang | [@cwang999](https://github.com/cwang999) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1) | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=cwang999) | [Connor and Jacob's Journal](https://docs.google.com/document/d/1c5PIYwjII7IuVlCnkpn-ORHjwLj-XQIN5B2BWxP6aOw/edit?usp=sharing)
+Connor Wang | [@cwang999](https://github.com/cwang999) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1) | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=cwang999) | [Connor and Jacob's Journal](https://docs.google.com/document/d/1-R8S9MEu5mPPw0zFgESQjqUhEfASbBsncqbfxTgUX6E/edit)
 Jacob Rozenkrants | [@jar04](https://github.com/jar04) | [Tasks](https://github.com/MadCacti/flask_portfolio/issues) | [Scrum Board](https://github.com/MadCacti/flask_portfolio/projects/1) | [Commits](https://github.com/MadCacti/flask_portfolio/commits/main?author=jar04) | 
 
 
 
 
 
-**Runtime Link**: TBD
-
+Runtime
+=================
+link to be added
 ## Sprint 1 Week 2
 
 
-## Sprint 2 Week 2
-
+Sprint-2-Week-2
+===================
 Requirements | Evidence |
 ----------- | ----------- |
 Scrum Master. Define tasks and place assignments to in-progress on the Scrum board.  | [Scrum Board](https://github.com/MadCActi/flask_portfolio/projects/1) |
@@ -30,15 +42,15 @@ Technical Lead. Coordinate brain write session, after preliminary wire frames, m
 Navigators. Capture or build highlight of Ideation in README.md, this allows ideas to persist with Project,  Make sure that work from Developers works to expectations (testing, suggestions for improvement) | Use Vanta for backgrounds                                                                                                                        Show photos of protfolio |
 Developers. Bootstrap drop downs in navbar, start to form Wire Frame menu options.  Each menu option should have a Stub code page | image to be added|
 Developers. Integration of Greet like functionality into a mini-lab page | Added to each individual page ![image]to be added |
-Developers. Integration of Video Journal 0 into a mini-lab page | [Video Journal 0 embedded into portfolio ] to be added
+Developers. Integration of Video Journal 0 into a mini-lab page | [Video Journal 0 embedded into portfolio](https://www.youtube.com/playlist?list=PLq5N5__AYvxqlz5qP-F1AlRSlRIz2eByY)
 
 
-## Sprint 3 Week 3
-
+Sprint-3-Week-3
+===================
 Requirements | Evidence |
 ----------- | ----------- |
-Issues | Raiden was absent this week, therefore will need to do some team catchup.
-Review binary | Binary Numbers: What binary numbers are and how they are used. All the media that we see in modern devices are made from millions of simple on/off switches *full notes found in journal*|
+Note: | Raiden was absent this week, therefore will need to do some team catchup. He will add the minute update journal when done.
+Review binary | Binary Numbers: What are they and how they can be used in the real world in computers and programs|
 
 
 
