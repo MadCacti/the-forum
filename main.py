@@ -30,6 +30,21 @@ def hawkers():
 def stub():
     return render_template("stub.html")
 
+@app.route('/national_events/')
+def national_events():
+    return render_template("national_events.html")
+
+@app.route('/international_events/')
+def international_events():
+    return render_template("international_events.html")
+
+@app.route('/science_news/')
+def science_news():
+    return render_template("science_news.html")
+
+@app.route('/sports_news/')
+def sports_news():
+    return render_template("sports_news.html")
 
 @app.route('/raiden/', methods=['GET', 'POST'])
 def raiden():
@@ -74,6 +89,7 @@ def Jacob():
 @app.route('/binary/')
 def binary():
     return render_template("binary.html")
+
 
 @app.route('/greet', methods=['GET', 'Post'])
 def greet():
