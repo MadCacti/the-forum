@@ -1,0 +1,29 @@
+{% extends "layouts/base.html" %}
+
+{% set project = "most_popular" %}
+
+{% block body %}
+    <p>Here you can see a list of the most popular topics for this month from any category.</p>
+
+{% endblock %}
+{% block background %}
+    <script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='vanta.waves.min.js') }}"></script>
+    <script>
+        VANTA.WAVES({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            color: 0x1292d,
+            scaleMobile: 1.00,
+            shininess: 1000.00,
+            waveHeight: 23.00,
+            waveSpeed: 2.15
+        })
+    </script>
+{% endblock %}
+</html>
