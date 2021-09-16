@@ -94,7 +94,7 @@ def Jacob():
 def binary():
     if request.form:
         bits = request.form.get("bits")
-        if len(bits) != 0:  # input field has content
+        if int(bits) > 7:  # input field has content
             return render_template("binary.html", bits=int(bits))
         # starting and empty input default
     return render_template("binary.html", bits=8)
