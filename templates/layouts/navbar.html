@@ -31,9 +31,22 @@ This HTML is setup as a fragment allowing it to be "included" by other HTML file
                 <a class="nav-link dropdown-toggle" href="#" id="navbarSupportedContent" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mini-Labs</a>
                 <div class="dropdown-menu" aria-labelledby="navbarSupportedContent">
                     <a class="dropdown-item" href="/greet">Greet</a>
-                    <a class="dropdown-item" href="/Binary">Binary</a>
+                    <a class="dropdown-item" href="/binary">Binary</a>
                 </div>
             </li>
         </ul>
     </div>
+    <div class="px-3">
+        <span id="clock"></span>
+    </div>
+    <script>
+        // Clock controller, taken from original website
+        let clockElement = document.getElementById('clock');
+        function clock() {
+            let date = new Date();
+            clockElement.textContent = date.toLocaleString();
+        }
+        // Clock refresh frequency
+        setInterval(clock, 1000);
+    </script>
 </nav>
