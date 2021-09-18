@@ -37,7 +37,7 @@ Sprint-2-Week-2
 Requirements | Evidence |
 ----------- | ----------- |
 Scrum Master. Define tasks and place assignments to in-progress on the Scrum board.  | [Scrum Board](https://github.com/MadCActi/flask_portfolio/projects/1) |
-Designer. Wire Frame (at least three theme pages, team mini-labs, and about) | [Wireframe - link to be added] |
+Designer. Wire Frame (at least three theme pages, team mini-labs, and about) | https://www.figma.com/file/AFfWCkefwQGT4O1QuhZxUs/Wire-Frame |
 Technical Lead. Coordinate brain write session, after preliminary wire frames, make sure you capture technical complexities as an output of this exercise (input, saving data, comments, visual actions, animations, ...) | An idea is a forum for current events with multiple subcategories for people to talk in different places.
 Navigators. Capture or build highlight of Ideation in README.md, this allows ideas to persist with Project,  Make sure that work from Developers works to expectations (testing, suggestions for improvement) | Use Vanta for backgrounds                                                                                                                        Show photos of protfolio |
 Developers. Bootstrap drop downs in navbar, start to form Wire Frame menu options.  Each menu option should have a Stub code page | image to be added|
