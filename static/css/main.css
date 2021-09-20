@@ -1,0 +1,51 @@
+:root{
+    --color1: rgb(155, 152, 152);
+    --color2: rgb(26, 25, 25);
+    --bgColor: #ffffff;
+    --headerColor: #101011;
+    --navTextColor: #e0e1dd;
+    --contentTextColor: #000000;
+    --textColor: #000000;
+}
+
+html, body{
+    margin: 0;
+    height: 100%;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+    background-color: var(--bgColor);
+    color: var(--textColor);
+}
+
+.content {
+    margin: 1em;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+.navbar-custom {
+    background-color: var(--headerColor);
+}
+
+.navbar a,
+.navbar a:hover,
+.navbar a:active {
+    color: var(--navTextColor);
+    font-family: "Apple Chancery, cursive";
+}
+
+.content,
+.content a,
+.content a:hover {
+    color: var(--contentTextColor);
+    font-family: "Apple Chancery, cursive";
+}
+
+.baseNav {
+    background-color: var(--bgColor);
+    color: var(--textColor);;
+}
