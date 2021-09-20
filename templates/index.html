@@ -1,30 +1,8 @@
-<!-- Extending the project layout, as this file will do minor customizations -->
-
-<!-- Setting up variables to customize "project" details to be specific to index page -->
-{% set project = "Portfolio" %}
 {% extends "layouts/base.html" %}
-{% block body %}
+{% block content %}
 
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
-        <div class="col-12">
-            <h2>Hello, welcome to the home page!</h2>
-        </div>
+    <div class="row">
+        <h1 style="text-align: center;">Hi! Welcome to the Forum.</h1>
     </div>
+
 {% endblock %}
-{% block background %}
-<script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>
-<script src="{{ url_for('static', filename='vanta.birds.min.js') }}"></script>
-<script>
-    VANTA.BIRDS({
-        el: "body",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00
-    })
-</script>
-{% endblock %}
-</html>

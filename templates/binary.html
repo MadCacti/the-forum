@@ -7,7 +7,9 @@
 <!-- Hack: Build form to drive bit size dynamic updates
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
-<!-- Hack: use 8 as default -->
+<!-- Hack: use 8 as default
+Done, check main.py line 88, prevents value below 8
+-->
 {% set BITS = bits %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
