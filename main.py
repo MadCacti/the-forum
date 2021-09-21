@@ -31,6 +31,10 @@ def sports_news():
 def most_popular():
     return render_template("most_popular.html")
 
+@app.route('/video_journal_0/')
+def video_journal_0():
+    return render_template("video_journal_0.html")
+
 @app.route('/raiden/', methods=['GET', 'POST'])
 def raiden():
     # submit button has been pushed
