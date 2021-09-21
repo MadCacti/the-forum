@@ -4,16 +4,15 @@
 <!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
 <!-- need to adjust Templates to start -->
 
-<!-- Hack: Build form to drive bit size dynamic updates
+<!-- DONE Hack: Build form to drive bit size dynamic updates
            use HTML Input Form in Frontend, ie toward top of Page
            send initial value and updated values to form via Python render_template -->
-<!-- Hack: use 8 as default
-Done, check main.py line 88, prevents value below 8
--->
+<!-- DONE Hack: use 8 as default -->
+
 {% set BITS = bits %}
 {% set MAX = ((2 ** BITS) - 1) %}
 
-<!-- Hack: Set bulbs and pass as variables via Python render_template
+<!-- DONE Hack: Set bulbs and pass as variables via Python render_template
            add new images (ie PNGs) to project -->
 <!-- use your PNGs as default -->
 {% set imgBulbOn = "/static/assets/bulb_on.gif" %}
@@ -21,8 +20,9 @@ Done, check main.py line 88, prevents value below 8
 {% set msgTurnOn = "Turn On" %}
 {% set msgTurnOff = "Turn Off" %}
 
-{% block meta %}
+{% block content %}
     <title>Binary page</title>
+
     <script>
         const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
         // return string with current value of each bit
@@ -42,12 +42,12 @@ Done, check main.py line 88, prevents value below 8
             document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
             // DOM assignment to Decimal conversion
             document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-            /* Hack: show ASCII printable character(s) for each 8 bits
+            /* Done Hack: show ASCII printable character(s) for each 8 bits
              DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
              below ASCII for more ideas of where to make changes
              */
-            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
-
+            let text = String.fromCharCode(parseInt(parseInt(binary, 2).toString(10)));
+            document.getElementById('ascii').innerHTML = text;
         }
 
         // algorithm to convert decimal to base using division and remainder
@@ -116,12 +116,10 @@ Done, check main.py line 88, prevents value below 8
             }
         }
     </script>
-{% endblock %}
 
-{% block body %}
     <h1 class="text-center">Binary Math with Conversions</h1>
 
-    <form action="/binary/" id="bits" method="POST" >
+    <form action="/binary" id="bits" method="POST" >
         <label for="bits">Enter Bit Size</label>
         <input name="bits">
         <input type="submit" value="Go!">
@@ -175,6 +173,4 @@ Done, check main.py line 88, prevents value below 8
 
         </div>
     </div>
-{% endblock %}
-{% block background %}
 {% endblock %}
