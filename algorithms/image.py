@@ -20,9 +20,10 @@ def image_formatter(img, img_type):
 def image_data(path="static/assets/images/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
-            {'source': "Dog", 'label': "Funny Dog", 'file': "2021.jpeg"},
-            {'source': "Goat?", 'label': "Funny Animal", 'file': "funnyanimal.jpg"},
-            {'source': "Horse", 'label': "Funny Horse", 'file': "funnyhorse.jpg"}
+            {'source': "Car", 'label': "Car", 'file': "2021.jpeg"},
+            {'source': "Car 2", 'label': "Car 2", 'file': "Model S.jpeg"},
+            {'source': "Horse", 'label': "Funny Horse", 'file': "funnyhorse.jpg"},
+            {'source': "Horse", 'label': "Funny Horse", 'file': "funnyanimal.jpg"}
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
