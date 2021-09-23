@@ -71,3 +71,4 @@ Assignee | Requirements | Evidence | Score |
 -------- | ----------- | ----------| ------|
 Raiden | backend/frontend RGB | link | 0/2
 Brian  | fix file not found error | link | 0/2
+Connor | RGB Values with an Image, Backend... how would you write a message on top of image (Links to an external site.) and transport it to the Web?  Look at Pillow Image write in Tester. | link |--|
