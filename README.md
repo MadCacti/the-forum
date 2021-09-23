@@ -70,3 +70,4 @@ Sprint-5-Week-5
 Assignee | Requirements | Evidence | Score |
 -------- | ----------- | ----------| ------|
 Raiden | backend/frontend RGB | link | 0/2
+Brian  | fix file not found error | link | 0/2
