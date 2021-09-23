@@ -3,6 +3,11 @@ import numpy
 import base64
 from io import BytesIO
 
+img = Image.open('static/assets/images')
+d1 = ImageDraw.Draw(img)
+d1.text((28,36,), "Sample Text", fill=(255, 0, 0))
+img.show()
+img.save("image2_text.png")
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 def image_base64(img, img_type):
