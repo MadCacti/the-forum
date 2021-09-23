@@ -15,6 +15,15 @@
             }
         }
 
+        let rotation = 0;
+        function rotateImg() {
+            rotation += 90;
+            if (rotation === 360) {
+                rotation = 0;
+            }
+            document.querySelector("img").style.transform = `rotate(${rotation}deg)`;
+        }
+
         function toggle() {
             if (imageType == 0) {
                 toggleColors(gray);
@@ -37,6 +46,7 @@
 {% block content %}
     <h1 class="text-center">RGB values within an Image</h1>
     <div class="container">
+        <button onClick="rotateImg()">Rotate Image</button>
         <button onclick="toggle()">Toggle Colors!</button>
         <div class="row justify-content-md-center">
             <table class="table">

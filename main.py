@@ -37,13 +37,7 @@ def video_journal_0():
 
 @app.route('/raiden/', methods=['GET', 'POST'])
 def raiden():
-    # submit button has been pushed
-    if request.form:
-        namer = request.form.get("name")
-        if len(namer) != 0:  # input field has content
-            return render_template("raiden.html", funnyname=namer)
-    # starting and empty input default
-    return render_template("raiden.html", funnyname="World")
+    return render_template("raiden.html")
 
 
 @app.route('/brian', methods=['GET', 'POST'])
@@ -89,7 +83,7 @@ def greet():
     if request.form:
         name = request.form.get("name")
         if len(name) != 0:  # input field has content
-            return render_template("greet.html", nickname=name)
+            return render_template("greet.html", name=name)
     # starting and empty input default
     return render_template("greet.html", nickname="World")
 

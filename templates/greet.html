@@ -1,24 +1,11 @@
-
-
 {% extends "layouts/base.html" %}
-
 {% set project = "greet" %}
-
-{% block body %}
-    {#    <p>I am Connor and I am a junior and AP CSP student at Del Norte</p>#}
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
-        <div class="col-12">
-            <p>Hello, {{nickname}}!</p>
-        </div>
-        <div class="col-12">
-            <form action="/greet" id="greet" method="POST" >
-                <label for="name">Type a greeting name?</label>
-                <input name="name" id="name">
-                <input type="submit" value="Greetings!">
-            </form>
-        </div>
-    </div>
-{% endblock %}
-{% block background %}
+{% block content %}
+<p>Hello {{name}}! This is the greet mini lab.</p>
+<form action="/greet" id="greet" method="POST" >
+    <label for="name">Enter Your Name</label>
+    <input name="name" id="name">
+    <input type="submit" value="Go!">
+</form>
 {% endblock %}
 </html>
