@@ -1,42 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-{% extends "layouts/base.html" %}
-{% set project = "raiden" %}
 
-{% block body %}
-    <h2 style="background-color:rgba(0, 0, 0, 0.267);">Hey! I'm Raiden Tung, and am currently a junior at Del Norte. I enjoy soccer, computers, games, and hanging out with friends!</h2>
-    <div class="center-block" style="margin: 2% 5% 5%; text-align:center; font-family: gilroy,serif;">
-        <div class="col-12">
-            <p>Hello, {{funnyname}}!</p>
-        </div>
-        <div class="col-12">
-            <form action="/raiden/" id="greet" method="POST" >
-                <label for="name">Type a greeting name?</label>
-                <input name="name" id="name">
-                <input type="submit" value="Greetings!">
-            </form>
-        </div>
-    </div>
+{#</html>#}
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<div class="row">
+    <h2 style="text-align: center;">Hello! I'm Raiden and currently am a junior at Del Norte. I enjoy biking, soccer, eating, and spending time with friends.</h2>
+    <img src=""
+    <body style="background-color:lightskyblue"#}
+
+</div>
+
 {% endblock %}
-{% block background %}
-{#<script src="{{ url_for('static', filename='three.r119.min.js') }}"></script>#}
-{#    <script src="{{ url_for('static', filename='vanta.waves.min.js') }}"></script>#}
-{#<script>#}
-{#VANTA.WAVES({#}
-{#  el: "body",#}
-{#  mouseControls: true,#}
-{#  touchControls: true,#}
-{#  gyroControls: false,#}
-{#  minHeight: 200.00,#}
-{#  minWidth: 200.00,#}
-{#  scale: 1.00,#}
-{#  scaleMobile: 1.00,#}
-{#  color: 0x24292d,#}
-{#  shininess: 500.00,#}
-{#  waveHeight: 22.00,#}
-{#  waveSpeed: 1.15,#}
-{#  zoom: 0.70#}
-{#})#}
-{#</script>#}
-{% endblock %}
-</html>
