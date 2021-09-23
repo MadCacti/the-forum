@@ -24,7 +24,10 @@ def image_data(path="static/assets/images/", img_list=None):  # path of static i
             {'source': "Car 3", 'label': "Car 3", 'file': "Taycan.jpeg"},
             {'source': "Car", 'label': "Car", 'file': "2021.jpeg"},
             {'source': "Horse", 'label': "Funny Horse", 'file': "funnyhorse.jpg"},
-            {'source': "Horse", 'label': "Funny Horse", 'file': "funnyanimal.jpg"}
+            {'source': "Horse", 'label': "Funny Horse", 'file': "funnyanimal.jpg"},
+            {'source': "Airplane", 'label': "Airplane", 'file': "airplane.jpg"},
+            {'source': "Boeing747", 'label': "Boeing747", 'file': "boeing747.jpg"},
+
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
@@ -42,6 +45,15 @@ def image_data(path="static/assets/images/", img_list=None):  # path of static i
         img_dict['data'] = numpy.array(img_data)
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
+
+# Start of pillow test code
+#         img = Image.open(file)
+#         d1 = ImageDraw.Draw(img)
+#         d1.text((28, 36), "Hello, This is a test to write text on top of each image!", fill=(255, 0, 0))
+#         img.show()
+#         # img.save("images/image_text.jpg")
+# End of pillow test code
+
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
             # hexadecimal conversions
@@ -64,17 +76,20 @@ def image_data(path="static/assets/images/", img_list=None):  # path of static i
     return img_list  # list is returned with all the attributes for each image dictionary
 
 
-# # run this as standalone tester to see data printed in terminal
+# run this as standalone tester to see data printed in terminal
 # if __name__ == "__main__":
-#     local_path = "../static/img/"
-#     img_test = [
-#         {'source': "idk who this is lol", 'label': "Chinese person", 'file': "chinese.png"}
-#     ]
-#     items = image_data(local_path, img_test)  # path of local run
+#     # local_path = "../static/img/"
+#     # local_path = "../static/assets/"
+#     # img_test = [
+#     #     # {'source': "idk who this is lol", 'label': "Chinese person", 'file': "chinese.png"}
+#     #     {'source': "idk who this is lol", 'label': "Chinese person", 'file': "bulb_off.png"}
+#     # ]
+#     # items = image_data(local_path, img_test)  # path of local run
+#     items = image_data()
 #     for row in items:
 #         # print some details about the image so you can validate that it looks like it is working
 #         # meta data
-#         print("---- meta data -----")
+#         print("---- meta Connor data -----")
 #         print(row['label'])
 #         print(row['format'])
 #         print(row['mode'])
