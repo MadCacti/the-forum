@@ -47,11 +47,11 @@ def image_data(path="static/assets/images/", img_list=None):  # path of static i
         img_dict['binary_array'] = []
 
 # Start of pillow test code
-#         img = Image.open(file)
-#         d1 = ImageDraw.Draw(img)
-#         d1.text((28, 36), "Hello, This is a test to write text on top of each image!", fill=(255, 0, 0))
-#         img.show()
-#         # img.save("images/image_text.jpg")
+        img = Image.open(file)
+        d1 = ImageDraw.Draw(img)
+        d1.text((28, 36), "Hello, This is a test to write text on top of each image!", fill=(255, 0, 0))
+        img.show()
+        # img.save("images/image_text.jpg")
 # End of pillow test code
 
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
