@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8e04888-9a88-4435-9e0d-5fd43c4d7a70" name="Changes" comment="update README.md">
+    <list default="true" id="e8e04888-9a88-4435-9e0d-5fd43c4d7a70" name="Changes" comment="comment out pillow test code - testing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Connor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/Connor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Jacob.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/Jacob.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/binary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/minilabs/binary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/brian.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/brian.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/greet.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/minilabs/greet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/international_events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/international_events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/most_popular.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/most_popular.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/national_events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/national_events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/raiden.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/raiden.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rgb.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/minilabs/rgb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/science_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/science_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/sports_news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/sports_news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/stub.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +41,14 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\raide\Desktop\IdeaProjects\templates\pages" />
+      <recent name="C:\Users\raide\Desktop\IdeaProjects\templates" />
+      <recent name="C:\Users\raide\Desktop\IdeaProjects\profiles" />
+      <recent name="C:\Users\raide\Desktop\IdeaProjects\templates\minillabs" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="IdeaProjects" type="PythonConfigurationType" factoryName="Python">
@@ -106,7 +127,7 @@
       <option name="presentableId" value="Default" />
       <updated>1632346704974</updated>
       <workItem from="1632346706582" duration="1056000" />
-      <workItem from="1632430540105" duration="4433000" />
+      <workItem from="1632430540105" duration="5922000" />
     </task>
     <task id="LOCAL-00001" summary="Made image rotate">
       <created>1632433796766</created>
@@ -136,7 +157,21 @@
       <option name="project" value="LOCAL" />
       <updated>1632454113372</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update main.css">
+      <created>1632454688295</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1632454688295</updated>
+    </task>
+    <task id="LOCAL-00006" summary="comment out pillow test code - testing">
+      <created>1632454759475</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1632454759475</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -156,9 +191,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Made image rotate" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="update main.css" />
+    <MESSAGE value="comment out pillow test code - testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment out pillow test code - testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/IdeaProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1632454519700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/IdeaProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1632456158848" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
