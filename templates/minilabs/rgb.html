@@ -4,9 +4,9 @@
 {% block meta %}
     <script>
 
-        var color = {{ colored|safe }}
+        var normal = {{ colored|safe }}
         var gray = {{ grayed|safe }}
-        var imageType = 0; // 0 is color, 1 is gray
+        var imageType = 0; // 0 is normal, 1 is gray
 
         function toggleColors(array) {
             for (var i = 1; i <= array.length; i++) {
@@ -14,7 +14,7 @@
                 setImg(id, array[i-1]);
             }
         }
-
+        // ref: https://sebhastian.com/
         let rotation = 0;
         function rotateImg() {
             rotation += 90;
@@ -29,7 +29,7 @@
                 toggleColors(gray);
                 imageType = 1;
             } else {
-                toggleColors(color);
+                toggleColors(normal);
                 imageType = 0;
             }
         }
@@ -40,14 +40,14 @@
         }
     </script>
 
-    <title>RGB starter</title>
+    <title>RGB</title>
 {% endblock %}
 
 {% block content %}
     <h1 class="text-center">RGB values within an Image</h1>
     <div class="container">
-        <button onClick="rotateImg()">Rotate Image</button>
-        <button onclick="toggle()">Toggle Colors!</button>
+        <button onClick="rotateImg()">Rotate 1st Image</button>
+        <button onclick="toggle()">Grayscale Toggle</button>
         <div class="row justify-content-md-center">
             <table class="table">
                 <thead>

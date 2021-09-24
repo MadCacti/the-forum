@@ -54,11 +54,11 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
         img_dict['binary_array'] = []
 
 # Start of pillow test code
-#         img = Image.open(file)
-#         d1 = ImageDraw.Draw(img)
-#         d1.text((28, 36), "Hello, This is a test to write text on top of each image!", fill=(255, 0, 0))
-#         img.show()
-#         # img.save("images/image_text.jpg")
+  #      img = Image.open(file)
+    #    d1 = ImageDraw.Draw(img)
+     #   d1.text((28, 36), "Hello, This is a test to write text on top of each image!", fill=(255, 0, 0))
+     #   img.show()
+        # img.save("images/image_text.jpg")
 # End of pillow test code
 
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
@@ -82,42 +82,3 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary
 
-
-# run this as standalone tester to see data printed in terminal
-# if __name__ == "__main__":
-#     # local_path = "../static/img/"
-#     # local_path = "../static/assets/"
-#     # img_test = [
-#     #     # {'source': "idk who this is lol", 'label': "Chinese person", 'file': "chinese.png"}
-#     #     {'source': "idk who this is lol", 'label': "Chinese person", 'file': "bulb_off.png"}
-#     # ]
-#     # items = image_data(local_path, img_test)  # path of local run
-#     items = image_data()
-#     for row in items:
-#         # print some details about the image so you can validate that it looks like it is working
-#         # meta data
-#         print("---- meta Connor data -----")
-#         print(row['label'])
-#         print(row['format'])
-#         print(row['mode'])
-#         print(row['size'])
-#         # data
-#         print("----  data  -----")
-#         print(row['data'])
-#         print("----  gray data  -----")
-#         print(row['gray_data'])
-#         print("----  hex of data  -----")
-#         print(row['hex_array'])
-#         print("----  bin of data  -----")
-#         print(row['binary_array'])
-#         # base65
-#         print("----  base64  -----")
-#         print(row['base64'])
-#         # display image
-#         print("----  render and write in image  -----")
-#         filename = local_path + row['file']
-#         image_ref = Image.open(filename)
-#         draw = ImageDraw.Draw(image_ref)
-#         draw.text((0, 0), "Size is {0} X {1}".format(*row['size']))  # draw in image
-#         image_ref.show()
-# print()

@@ -67,7 +67,8 @@ Developers. Ensure each person has Prototype and/or TT3 hack coding task.  TT3 B
 
 Sprint-5-Week-5
 =================
-Assignee | Requirements | Evidence | Score |
--------- | ----------- | ----------| ------|
-Raiden | backend/frontend RGB | link | 0/2
-Brian  | fix file not found error | link | 0/2
+Assignee | Requirements | Evidence |
+-------- | ----------- | ----------| 
+Raiden | backend/frontend RGB | link | 
+Brian  | fix file not found error | link |
+Raiden | added rotation to image | [link](https://github.com/MadCacti/flask_portfolio/issues/5#issuecomment-926191469) |
