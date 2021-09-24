@@ -1,8 +1,8 @@
-from pathlib import Path
 from PIL import Image, ImageDraw
 import numpy
 import base64
 from io import BytesIO
+
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 def image_base64(img, img_type):
@@ -11,21 +11,13 @@ def image_base64(img, img_type):
         return base64.b64encode(buffer.getvalue()).decode()
 
 
-
-def image_data(path=Path("static/assets/images/"), img_list=None):  # path of static images is defaulted
-
-    for img_dict in img_list:
-        # File to open
-        file = path / img_dict['file']  # file with path for local access (backend)
-
 # formatter preps base64 string for inclusion, ie <img src=[this return value] ... />
 def image_formatter(img, img_type):
     return "data:image/" + img_type + ";base64," + image_base64(img, img_type)
 
 
-
 # color_data prepares a series of images for data analysis
-def image_data(path=Path("static/assets/images/"), img_list=None):  # path of static images is defaulted
+def image_data(path="static/assets/images/", img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Car 2", 'label': "Car 2", 'file': "Model S.jpeg"},
@@ -33,13 +25,14 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
             {'source': "Car", 'label': "Car", 'file': "2021.jpeg"},
             {'source': "Horse", 'label': "Funny Horse", 'file': "funnyhorse.jpg"},
             {'source': "Horse", 'label': "Funny Horse", 'file': "funnyanimal.jpg"},
+            {'source': "Airplane", 'label': "Airplane", 'file': "airplane.jpg"},
+            {'source': "Boeing747", 'label': "Boeing747", 'file': "boeing747.jpg"},
+
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
-        # img_dict['path'] = '/' + path  # path for HTML access (frontend)
-        #file = path + img_dict['file']  # file with path for local access (backend)
-        # File to open
-        file = path / img_dict['file']  # file with path for local access (backend)
+        img_dict['path'] = '/' + path  # path for HTML access (frontend)
+        file = path + img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
@@ -53,13 +46,13 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
 
-# Start of pillow test code
-  #      img = Image.open(file)
-    #    d1 = ImageDraw.Draw(img)
-     #   d1.text((28, 36), "Hello, This is a test to write text on top of each image!", fill=(255, 0, 0))
-     #   img.show()
+        # Start of pillow test code
+        #      img = Image.open(file)
+        #    d1 = ImageDraw.Draw(img)
+        #   d1.text((28, 36), "Hello, This is a test to write text on top of each image!", fill=(255, 0, 0))
+        #   img.show()
         # img.save("images/image_text.jpg")
-# End of pillow test code
+        # End of pillow test code
 
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
@@ -81,4 +74,3 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary
-
