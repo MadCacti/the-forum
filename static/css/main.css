@@ -35,14 +35,14 @@ h1 {
 .navbar a:hover,
 .navbar a:active {
     color: var(--navTextColor);
-    font-family: "Apple Chancery, cursive";
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .content,
 .content a,
 .content a:hover {
     color: var(--contentTextColor);
-    font-family: "Apple Chancery, cursive";
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .baseNav {
