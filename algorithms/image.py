@@ -1,13 +1,8 @@
+from pathlib import Path
 from PIL import Image, ImageDraw
 import numpy
 import base64
 from io import BytesIO
-
-img = Image.open('static/assets/images')
-d1 = ImageDraw.Draw(img)
-d1.text((28,36,), "Sample Text", fill=(255, 0, 0))
-img.show()
-img.save("image2_text.png")
 
 # image (PNG, JPG) to base64 conversion (string), learn about base64 on wikipedia https://en.wikipedia.org/wiki/Base64
 def image_base64(img, img_type):
@@ -16,13 +11,21 @@ def image_base64(img, img_type):
         return base64.b64encode(buffer.getvalue()).decode()
 
 
+
+def image_data(path=Path("static/assets/images/"), img_list=None):  # path of static images is defaulted
+
+    for img_dict in img_list:
+        # File to open
+        file = path / img_dict['file']  # file with path for local access (backend)
+
 # formatter preps base64 string for inclusion, ie <img src=[this return value] ... />
 def image_formatter(img, img_type):
     return "data:image/" + img_type + ";base64," + image_base64(img, img_type)
 
 
+
 # color_data prepares a series of images for data analysis
-def image_data(path="static/assets/images/", img_list=None):  # path of static images is defaulted
+def image_data(path=Path("static/assets/images/"), img_list=None):  # path of static images is defaulted
     if img_list is None:  # color_dict is defined with defaults
         img_list = [
             {'source': "Car 2", 'label': "Car 2", 'file': "Model S.jpeg"},
@@ -30,14 +33,13 @@ def image_data(path="static/assets/images/", img_list=None):  # path of static i
             {'source': "Car", 'label': "Car", 'file': "2021.jpeg"},
             {'source': "Horse", 'label': "Funny Horse", 'file': "funnyhorse.jpg"},
             {'source': "Horse", 'label': "Funny Horse", 'file': "funnyanimal.jpg"},
-            {'source': "Airplane", 'label': "Airplane", 'file': "airplane.jpg"},
-            {'source': "Boeing747", 'label': "Boeing747", 'file': "boeing747.jpg"},
-
         ]
     # gather analysis data and meta data for each image, adding attributes to each row in table
     for img_dict in img_list:
-        img_dict['path'] = '/' + path  # path for HTML access (frontend)
-        file = path + img_dict['file']  # file with path for local access (backend)
+        # img_dict['path'] = '/' + path  # path for HTML access (frontend)
+        #file = path + img_dict['file']  # file with path for local access (backend)
+        # File to open
+        file = path / img_dict['file']  # file with path for local access (backend)
         # Python Image Library operations
         img_reference = Image.open(file)  # PIL
         img_data = img_reference.getdata()  # Reference https://www.geeksforgeeks.org/python-pil-image-getdata/
