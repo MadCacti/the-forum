@@ -102,8 +102,8 @@ def greet():
 
 @app.route('/rgb', methods=["GET", "POST"])
 def rgb():
-  #  path = Path(app.root_path) / "static" / "assets/images"
-  #  return render_template('minilabs/rgb.html', images=image_data(path))
+    path = Path(app.root_path) / "static" / "assets/images"
+    return render_template('minilabs/rgb.html', images=image_data(path))
     rawList = image_data()
     colorList = []
     grayList = []
