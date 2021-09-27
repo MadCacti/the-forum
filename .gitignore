@@ -5,3 +5,8 @@
 /.idea/modules.xml
 /.idea/vcs.xml
 .idea/workspace.xml
+### Exclude IntelliJ IDEA from GitHub ###
+.idea
+*.iws
+*.iml
+*.ipr
