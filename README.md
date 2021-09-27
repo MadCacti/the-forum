@@ -7,6 +7,7 @@ Table of contents
 * [Sprint 2 Week 2](#sprint-2-week-2)
 * [Sprint 3 Week 3](#sprint-3-week-3)
 * [Sprint 3 Week 4](#sprint-3-week-4)
+* [Sprint 5 Week 5](#sprint-5-week-5)
 <!--te-->
 
 Credits
@@ -62,13 +63,13 @@ Requirements | Evidence |
 Scrum Master. Continue planning best practice, be prepared for review during class on Wednesday, for points  | [Scrum Board](https://github.com/MadCActi/flask_portfolio/projects/1) |
 Designer. Ensure there is a Design or Research asset for prototyping work. | https://www.figma.com/file/AFfWCkefwQGT4O1QuhZxUs/Wire-Frame |
 Navigators. Build a video showing design and runtime of prototype(s). | Video link to be added
-Developers. Ensure each person has Prototype and/or TT3 hack coding task.  TT3 Binary Math must be included in project with all "Hack" suggestions.  Duplicating a Hack task for multiple individuals and integrating into their personal page(s), would be wise for someone who is behind on code commits. Everyone needs code commits. | Some of the Binary hack codings were done and the tasks were completed. Although it only shows as one person editing, we all collaboratively worked on it to understand how to get them to work and why. [Link to file](https://github.com/MadCacti/flask_portfolio/blob/main/templates/binary.html)
+Developers. Ensure each person has Prototype and/or TT3 hack coding task.  TT3 Binary Math must be included in project with all "Hack" suggestions.  Duplicating a Hack task for multiple individuals and integrating into their personal page(s), would be wise for someone who is behind on code commits. Everyone needs code commits. | Some of the Binary hack codings were done and the tasks were completed. Although it only shows as one person editing, we all collaboratively worked on it to understand how to get them to work and why. [Link to file](https://github.com/MadCacti/flask_portfolio/blob/main/templates/minilabs/binary.html)
 
 
 Sprint-5-Week-5
 =================
 Assignee | Requirements | Evidence |
 -------- | ----------- | ----------| 
-Raiden | backend/frontend RGB | link | 
-Brian  | fix file not found error | link |
+Raiden | backend/frontend RGB | [link](https://github.com/MadCacti/flask_portfolio/blob/main/templates/minilabs/rgb.html) and [link](https://github.com/MadCacti/flask_portfolio/blob/main/algorithms/image.py)| 
+Brian  | fix file not found error | Trial/Error |
 Raiden | added rotation to image | [link](https://github.com/MadCacti/flask_portfolio/issues/5#issuecomment-926191469) |
