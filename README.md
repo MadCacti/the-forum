@@ -8,6 +8,8 @@ Table of contents
 * [Sprint 3 Week 3](#sprint-3-week-3)
 * [Sprint 3 Week 4](#sprint-3-week-4)
 * [Sprint 5 Week 5](#sprint-5-week-5)
+* [Sprint 5 Week 6](#sprint-5-week-6)
+
 <!--te-->
 
 Credits
@@ -73,3 +75,10 @@ Assignee | Requirements | Evidence |
 Raiden | backend/frontend RGB | [link](https://github.com/MadCacti/flask_portfolio/blob/main/templates/minilabs/rgb.html) and [link](https://github.com/MadCacti/flask_portfolio/blob/main/algorithms/image.py)| 
 Brian  | fix file not found error | Trial/Error |
 Raiden | added rotation to image | [link](https://github.com/MadCacti/flask_portfolio/issues/5#issuecomment-926191469) |
+
+Sprint-5-Week-6
+=================
+Continuation of Week 5 - Keep working on RGB code
+Assignee | Requirements | Evidence |
+-------- | ----------- | ----------| 
+
