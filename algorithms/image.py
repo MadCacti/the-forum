@@ -52,7 +52,7 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
         img_dict['data'] = numpy.array(img_data)
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
-
+        img_dict['gray_data'] = []
 # Start of pillow test code
         img = Image.open(file)
         d1 = ImageDraw.Draw(img)
@@ -71,8 +71,6 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
         # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
-        img_dict['gray_data'] = []
-        for pixel in img_dict['data']:
             average = (pixel[0] + pixel[1] + pixel[2]) // 3
             if len(pixel) > 3:
                 img_dict['gray_data'].append((average, average, average, pixel[3]))
