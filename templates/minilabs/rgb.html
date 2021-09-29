@@ -43,7 +43,17 @@
     <title>RGB</title>
 {% endblock %}
 
+<!--taken from code in greet.html and changed a few things-->
+{% set project = "rgb" %}
 {% block content %}
+<p>Input text: {{myText}}! This is for the text on images.</p>
+<form action="/rgb" id="rgb" method="POST" >
+    <label for="myText">Enter Your Text</label>
+    <input name="myText" id="myText">
+    <input type="submit" value="Run!">
+</form>
+<!--end of code taken from greet.html-->
+
     <h1 class="text-center">RGB values within an Image</h1>
     <div class="container">
         <button onClick="rotateImg()">Rotate 1st Image</button>
