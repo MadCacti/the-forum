@@ -99,19 +99,10 @@ def greet():
     return render_template("minilabs/greet.html", nickname="World")
 
 
-@app.route('/rgb', methods=["GET", "POST"])
+@app.route('/rgb/', methods=['GET', 'POST'])
 def rgb():
-    # path = Path(app.root_path) / "static" / "assets/images"
-    # return render_template('minilabs/rgb.html', images=image_data(path))
-    rawList = image_data()
-    colorList = []
-    grayList = []
-    for img in rawList:
-        colorList.append(img['base64'])
-        grayList.append(img['base64_GRAY'])
-
-    return render_template('minilabs/rgb.html', images=rawList, colored=colorList, grayed=grayList)
-
+    path = Path(app.root_path) / "static" / "assets" / "images"
+    return render_template('minilabs/rgb.html', images=image_data(path))
 # runs the application on the development server
 
 

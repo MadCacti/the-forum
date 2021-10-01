@@ -53,13 +53,13 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
         img_dict['hex_array'] = []
         img_dict['binary_array'] = []
         img_dict['gray_data'] = []
-# Start of pillow test code
+        # Start of pillow test code
         img = Image.open(file)
         d1 = ImageDraw.Draw(img)
         d1.text((28, 36), "Hello, This is a test to write text on top of each image!", fill=(255, 0, 0))
         # img.show()
         img.save(file)
-# End of pillow test code
+        # End of pillow test code
 
         # 'data' is a list of RGB data, the list is traversed and hex and binary lists are calculated and formatted
         for pixel in img_dict['data']:
@@ -70,7 +70,7 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
             # binary conversions
             bin_value = bin(pixel[0])[2:].zfill(8) + " " + bin(pixel[1])[2:].zfill(8) + " " + bin(pixel[2])[2:].zfill(8)
             img_dict['binary_array'].append(bin_value)
-        # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
+            # create gray scale of image, ref: https://www.geeksforgeeks.org/convert-a-numpy-array-to-an-image/
             average = (pixel[0] + pixel[1] + pixel[2]) // 3
             if len(pixel) > 3:
                 img_dict['gray_data'].append((average, average, average, pixel[3]))
@@ -79,4 +79,3 @@ def image_data(path=Path("static/assets/images/"), img_list=None):  # path of st
         img_reference.putdata(img_dict['gray_data'])
         img_dict['base64_GRAY'] = image_formatter(img_reference, img_dict['format'])
     return img_list  # list is returned with all the attributes for each image dictionary
-

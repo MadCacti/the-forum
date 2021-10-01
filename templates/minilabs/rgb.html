@@ -1,119 +1,90 @@
-<!DOCTYPE html>
 {% extends "layouts/base.html" %}
-
-{% block meta %}
-    <script>
-
-        var normal = {{ colored|safe }}
-        var gray = {{ grayed|safe }}
-        var imageType = 0; // 0 is normal, 1 is gray
-
-        function toggleColors(array) {
-            for (var i = 1; i <= array.length; i++) {
-                let id = "img" + i;
-                setImg(id, array[i-1]);
-            }
-        }
-        // ref: https://sebhastian.com/
-        let rotation = 0;
-        function rotateImg() {
-            rotation += 90;
-            if (rotation === 360) {
-                rotation = 0;
-            }
-            document.querySelector("img").style.transform = `rotate(${rotation}deg)`;
-        }
-
-        function toggle() {
-            if (imageType == 0) {
-                toggleColors(gray);
-                imageType = 1;
-            } else {
-                toggleColors(normal);
-                imageType = 0;
-            }
-        }
-
-        function setImg(img, base64) {
-            // add button and rotate image from original to gray and back (toggle)
-            document.getElementById(img).src = base64;  //change img src to inner html on <p> tag
-        }
-    </script>
-
-    <title>RGB</title>
-{% endblock %}
-
-<!--taken from code in greet.html and changed a few things-->
-{% set project = "rgb" %}
 {% block content %}
-<p>Input text: {{myText}}! This is for the text on images.</p>
-<form action="/rgb" id="rgb" method="POST" >
-    <label for="myText">Enter Your Text</label>
-    <input name="myText" id="myText">
-    <input type="submit" value="Run!">
-</form>
-<!--end of code taken from greet.html-->
+<title>RGB starter</title>
+<h1 class="text-center">RGB values within an Image</h1>
+<button type="button" onclick="toggleImg()"> 1st image greyscale </button>
+<button type="button" onclick="rotateImg()"> rotate 1st image </button>
+<div class="container">
+    <div class="row justify-content-md-center">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Meta Data</th>
+                <th>Image</th>
+                <th>Data</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for image in images %}
+            <tr>
+                <td>
+                    <div>{{image.file}}</div>
+                    <div>{{image.format}}</div>
+                    <div>{{image.size}}</div>
+                    <div>{{image.label}}</div>
+                    <div>{{image.source}}</div>
+                </td>
+                <td>
+                    <img class="img-responsive py-3" id="img{{loop.index}}" alt="" width="256" height="Auto" src="{{image.base64}}" >
 
-    <h1 class="text-center">RGB values within an Image</h1>
-    <div class="container">
-        <button onClick="rotateImg()">Rotate 1st Image</button>
-        <button onclick="toggle()">Grayscale Toggle</button>
-        <div class="row justify-content-md-center">
-            <table class="table">
-                <thead>
-                <tr>
-                    <th>Meta Data</th>
-                    <th>Image</th>
-                    <th>Data</th>
-                </tr>
-                </thead>
-                <tbody>
-                {% for image in images %}
-                    <tr>
-                        <td>
-                            <div>{{image.file}}</div>
-                            <div>{{image.format}}</div>
-                            <div>{{image.size}}</div>
-                            <div>{{image.label}}</div>
-                            <div>{{image.source}}</div>
-                        </td>
-                        <td>
-                            <img class="img-responsive py-3" id=img{{loop.index}} alt="" width="256" height="Auto" src="{{image.base64}}" >
-                            <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
-                            <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
-                        </td>
-                        <td>
-                            <div class="overflow-auto" style="height: 256px">
-                                <table class="table">
-                                    <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>{{image.mode}}</th>
-                                        <th>Hex Code</th>
-                                        <th>Binary</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    {% for row in image.data[:256+1] %}
-                                        <tr>
-                                            <td>{{loop.index}}</td>
-                                            <td>{{row}}</td>
-                                            <td>{{image.hex_array[loop.index - 1]}}</td>
-                                            <td>{{image.binary_array[loop.index - 1]}}
-                                        </tr>
-                                        {% if loop.index > 256 %}
-                                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
-                                        {% endif %}
-                                    {% endfor %}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-
-        </div>
+                    <script>
+                        let imagecolor = 'color';
+                        function toggleImg() {
+                            if (imagecolor == 'color') {
+                                var imagetoggle = document.getElementById("img{{loop.index}}");
+                                imagetoggle.src = "{{image.base64_GRAY}}";
+                                imagecolor = 'gray';
+                            }
+                            else{
+                                var imagetoggle = document.getElementById("img{{loop.index}}");
+                                imagetoggle.src = "{{image.base64}}";
+                                imagecolor = 'color';
+                            }
+                        }
+                        // ref: https://sebhastian.com/
+                        let rotation = 0;
+                        function rotateImg() {
+                            rotation += 90;
+                            if (rotation === 360) {
+                                rotation = 0;
+                            }
+                            document.querySelector("img").style.transform = `rotate(${rotation}deg)`;
+                        }
+                    </script>
+                    <p hidden id="img_orig{{loop.index}}">{{image.base64}}</p>
+                    <p hidden id="img_gray{{loop.index}}">{{image.base64_GRAY}}</p>
+                </td>
+                <td>
+                    <div class="overflow-auto" style="height: 256px">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>{{image.mode}}</th>
+                                <th>Hex Code</th>
+                                <th>Binary</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for row in image.data[:256+1] %}
+                            <tr>
+                                <td>{{loop.index}}</td>
+                                <td>{{row}}</td>
+                                <td>{{image.hex_array[loop.index - 1]}}</td>
+                                <td>{{image.binary_array[loop.index - 1]}}
+                            </tr>
+                            {% if loop.index > 256 %}
+                            <tr><td>...</td><td>truncated</td><td>...</td><td>...</td></tr>
+                            {% endif %}
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
+</div>
 {% endblock %}
