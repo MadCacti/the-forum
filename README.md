@@ -83,3 +83,9 @@ Assignee | Requirements | Evidence |
 -------- | ----------- | ----------| 
 Raiden | big o notation | [link](https://github.com/MadCacti/flask_portfolio/commit/3fc1b957a4981477374d47a621175b07faf6023a) |
 Connor | add text to image | [link](https://github.com/MadCacti/flask_portfolio/commit/874ed8bfaab59e1fd726afe1bf282d25a84a7ce2) |
+
+Sprint-7-Week-8
+===============
+Working on more assignments.
+Assignee | Requirements | Evidence |
+-------- | ----------- | ----------| 
