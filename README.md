@@ -9,7 +9,7 @@ Table of contents
 * [Sprint 3 Week 4](#sprint-3-week-4)
 * [Sprint 5 Week 5](#sprint-5-week-5)
 * [Sprint 5 Week 6](#sprint-5-week-6)
-
+* [Sprint 7 Week 7](#Sprint-7-Week-7)
 <!--te-->
 
 Credits
@@ -84,8 +84,9 @@ Assignee | Requirements | Evidence |
 Raiden | big o notation | [link](https://github.com/MadCacti/flask_portfolio/commit/3fc1b957a4981477374d47a621175b07faf6023a) |
 Connor | add text to image | [link](https://github.com/MadCacti/flask_portfolio/commit/874ed8bfaab59e1fd726afe1bf282d25a84a7ce2) |
 
-Sprint-7-Week-8
+Sprint-7-Week-7
 ===============
 Working on more assignments.
 Assignee | Requirements | Evidence |
 -------- | ----------- | ----------| 
+Raiden | Multiply and Divide by 2 (Shift) | [link](https://github.com/MadCacti/the-forum/commit/6a74442994f8f0f02d276cd6e0181f7df097763d) |
