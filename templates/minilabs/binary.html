@@ -122,10 +122,11 @@
     function divide(n) {
         let binary = getBits();
             let decimal = parseInt(binary, 2);
-            if (decimal >= 2)
+            if (decimal >= 2 && decimal % 2 == 0)
                 decimal = decimal / 2;
             else
-                decimal = 0;
+                decimal = Math.floor(decimal / 2)
+
             binary = decimal_2_base(decimal, 2);
             setConversions(binary);
             updateImage(binary);        
