@@ -7,7 +7,7 @@ from algorithms.image import image_data
 app = Flask(__name__)
 
 
-# connects default URL to render index.html
+# connects default URL to render index.html 
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -77,16 +77,17 @@ def Jacob():
         if len(name) != 0:  # input field has content
             return render_template("profiles/Jacob.html", nickname=name)
     # starting and empty input default
-    return render_template("profiles/Jacob.html", nickname="World")
+    return render_template("profiles/Jacob.html", nickname="World")     
 
 
-@app.route('/binary/', methods=['GET', 'POST'])
+@app.route("/binary/", methods=['GET','POST'])
 def binary():
     if request.form:
-        number = request.form.get("input")
-        if len(number) != 0:
-            return render_template("/minilabs/binary.html", BITS=int(number), link="/binary/")
-    return render_template("/minilabs/binary.html", BITS=8, link="/binary/")
+        bits = request.form.get("bits")
+        if int(bits) > 7:  # input field has content
+            return render_template("minilabs/binary.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("minilabs/binary.html", bits=8)
 
 
 @app.route('/greet', methods=['GET', 'Post'])
