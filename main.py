@@ -106,6 +106,19 @@ def rgb():
     return render_template('minilabs/rgb.html', images=image_data(path))
 # runs the application on the development server
 
+@app.route('/logicgates/')
+def logicgates():
+    return render_template('minilabs/logicgates.html')
+
+@app.route("/morebinary/", methods=['GET','POST'])
+def morebinary():
+    if request.form:
+        bits = request.form.get("bits")
+        if int(bits) > 7:  # input field has content
+            return render_template("minilabs/morebinary.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("minilabs/morebinary.html", bits=8)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
