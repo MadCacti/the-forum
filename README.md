@@ -90,3 +90,4 @@ Working on more assignments.
 Assignee | Requirements | Evidence |
 -------- | ----------- | ----------| 
 Raiden | Multiply and Divide by 2 (Shift) | [link](https://github.com/MadCacti/the-forum/commit/6a74442994f8f0f02d276cd6e0181f7df097763d) |
+Raiden | Unsigned Addition | [link](https://github.com/MadCacti/the-forum/commit/f5592596f3379ab13203dbde7885ecdb606f3c62) and [simplified comments](https://github.com/MadCacti/the-forum/commit/17d1c73f37d362559822d584eb0ea642b6670a5f) |
