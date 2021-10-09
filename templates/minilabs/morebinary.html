@@ -58,24 +58,22 @@
             document.getElementById('binarysum').innerHTML = sumBinary(binvalue,binvalue1);
         }
         function sumBinary(binvalue,binvalue1) {
-            var result = "";                             // sets result as blank
-     
-    var s = 0;        
-    var i = binvalue.length - 1; 
-    var j = binvalue1.length - 1;
-    while (i >= 0 || j >= 0 || s == 1)                  
-    {
-        s += ((i >= 0)? binvalue.charAt(i).charCodeAt(0) -'0'.charCodeAt(0): 0);
-        s += ((j >= 0)? binvalue1.charAt(j).charCodeAt(0) -'0'.charCodeAt(0): 0);                  // does actual calculations
- 
-        result = String.fromCharCode(parseInt(s % 2) + '0'.charCodeAt(0)) + result;
- 
-        s = parseInt(s/2);                                //  CARRY OVER AAAAAAAAAAAAAAA, but actually just carries until its like below 0/1? idk guess n check
- 
-        i--; j--;                                        // basically just says - "repeat for all digits bc its not done yet"
-    }
-    return result                                        // returns result, which was set blank
+             var binlen1 = binvalue.length;
+             var binlen2 = binvalue1.length;
+             var max = Math.max(binlen1, binlen2);
+             var result = '';
+             var carry = 0;
+             var value = 0;
+
+            for (var i = 0; i < max; i++) {
+                value = Number(binvalue[binlen1 - 1 - i] || 0) + Number(binvalue1[binlen2 - 1 - i] || 0) + carry;
+                carry = Math.floor(value / 2);
+                result = (value % 2) + result;
+             }
+            return result;
         }
+
+        
         // toggle selected bit and recalculate
         function toggleBit(i) {
             //alert("Digit action: " + i );
