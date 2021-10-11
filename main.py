@@ -120,5 +120,14 @@ def morebinary():
     return render_template("minilabs/morebinary.html", bits=8)
 
 
+@app.route("/colorcodes/", methods=['GET','POST'])
+def colorcodes():
+    if request.form:
+        bits = request.form.get("bits")
+        if int(bits) > 7:  # input field has content
+            return render_template("minilabs/colorcodes.html", bits=int(bits))
+        # starting and empty input default
+    return render_template("minilabs/colorcodes.html", bits=8)
+
 if __name__ == "__main__":
     app.run(debug=True, port=5555)
