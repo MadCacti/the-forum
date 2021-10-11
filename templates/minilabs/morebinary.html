@@ -124,6 +124,46 @@
             const binary1 = getBits1();
             setConversionsbinarySum(binary, binary1)();
         }
+
+        function binarydifference() {
+            const binary = getBits();
+            const binary1 = getBits1();
+            document.getElementById('binarydifference').innerHTML = differenceBinary(binary,binary1);
+        }
+
+        function differenceBinary(binary,binary1) {
+            var binlen1 = binary.length;
+            var binlen2 = binary1.length;
+            // var max = Math.max(binlen1, binlen2);
+            var result = '';
+            var carry = 0;
+            var value = 0;
+
+            for(var i = 0; i < 9; i++) {
+                let DigitOfNumberToSubtractFrom = Number(binary[binlen1 - 1 - i] || 0);
+                let DigitOfNumberToSubtract = Number(binary1[binlen2 - 1 - i] || 0);
+                let carryOver = false;
+                if(carry == 1){
+                    if(DigitOfNumberToSubtract == 1)   {
+                        carryOver = true;
+                    }
+                    DigitOfNumberToSubtract = Number(!(DigitOfNumberToSubtract));
+                }
+                if(carryOver || (DigitOfNumberToSubtract > DigitOfNumberToSubtractFrom)) {
+                    carry = 1;
+                }
+                else {
+                    carry = 0;
+                }
+                let DigitToAdd = 0;
+                if(DigitOfNumberToSubtract != DigitOfNumberToSubtractFrom) {
+                    DigitToAdd = 1;
+                }
+                result = DigitToAdd + result;
+            }
+            return result;
+
+        }
     </script>
 {% endblock %}
 
@@ -198,10 +238,12 @@
                     <tr>
                         <th><input type="button" value="Calculate Binary Sum" onclick="binarysum()"></th>
                         <th><input type="button" value="Calculate Decimal Sum" onclick="decimalsum()"></th>
+                        <th><input type="button" value="Calculate Binary Difference" onclick="binarydifference()"></th>
                     </tr>
                     <tr>
                         <td id="binarysum">000000000</td>
                         <td id="decimalsum">0</td>
+                        <td id="binarydifference">000000000</td>
                     </tr>
                 </table>
             </div>

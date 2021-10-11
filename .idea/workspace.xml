@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8e04888-9a88-4435-9e0d-5fd43c4d7a70" name="Changes" comment="binary wrap + rows">
+    <list default="true" id="e8e04888-9a88-4435-9e0d-5fd43c4d7a70" name="Changes" comment="add unicode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algorithms/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/images/2021.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/2021.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/images/Model S.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/Model S.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/images/Taycan.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/Taycan.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/images/funnyanimal.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/funnyanimal.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/images/funnyhorse.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/images/funnyhorse.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/minilabs/binary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/minilabs/binary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/minilabs/morebinary.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/minilabs/morebinary.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +127,7 @@
       <workItem from="1632346706582" duration="1056000" />
       <workItem from="1632430540105" duration="11977000" />
       <workItem from="1632948723558" duration="317000" />
-      <workItem from="1633382333620" duration="15497000" />
+      <workItem from="1633382333620" duration="22016000" />
     </task>
     <task id="LOCAL-00001" summary="Made image rotate">
       <created>1632433796766</created>
@@ -212,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633123798994</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add unicode">
+      <created>1633923351240</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1633923351243</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +241,8 @@
     <MESSAGE value="tidy up, add ref" />
     <MESSAGE value="big o notation" />
     <MESSAGE value="binary wrap + rows" />
-    <option name="LAST_COMMIT_MESSAGE" value="binary wrap + rows" />
+    <MESSAGE value="add unicode" />
+    <option name="LAST_COMMIT_MESSAGE" value="add unicode" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/flask_portfolio$flask_portfolio.coverage" NAME="flask_portfolio Coverage Results" MODIFIED="1632344890316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
@@ -248,6 +250,6 @@
     <SUITE FILE_PATH="coverage/flask_portfolio$main.coverage" NAME="main Coverage Results" MODIFIED="1632521891348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IdeaProjectsTest2$main.coverage" NAME="main Coverage Results" MODIFIED="1632804605368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/flask_portfolio$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1632521286875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/the_forum$main.coverage" NAME="main Coverage Results" MODIFIED="1633922302281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/the_forum$main.coverage" NAME="main Coverage Results" MODIFIED="1633934599370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
