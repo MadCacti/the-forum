@@ -52,6 +52,11 @@
             num2 = parseInt(binary1, 2);
             document.getElementById('decimalsum').innerHTML = num1 + num2;
         }
+        function setConversionsDifference(binary, binary1) {
+            num1 = parseInt(binary, 2);
+            num2 = parseInt(binary1, 2);
+            document.getElementById('decimaldifference').innerHTML = num1 - num2;
+        }
         function setConversionsbinarySum(binary, binary1) {
             var binvalue = binary;
             var binvalue1 = binary1;                     // idk why i need to create a new variable but it works?
@@ -123,6 +128,12 @@
             const binary = getBits();
             const binary1 = getBits1();
             setConversionsbinarySum(binary, binary1)();
+        }
+
+        function decimaldifference() {
+            const binary = getBits();
+            const binary1 = getBits1();
+            setConversionsDifference(binary, binary1)();
         }
 
         function binarydifference() {
@@ -239,11 +250,13 @@
                         <th><input type="button" value="Calculate Binary Sum" onclick="binarysum()"></th>
                         <th><input type="button" value="Calculate Decimal Sum" onclick="decimalsum()"></th>
                         <th><input type="button" value="Calculate Binary Difference" onclick="binarydifference()"></th>
+                        <th><input type="button" value="Calculate Binary Difference" onclick="decimaldifference()"></th>
                     </tr>
                     <tr>
                         <td id="binarysum">000000000</td>
                         <td id="decimalsum">0</td>
                         <td id="binarydifference">000000000</td>
+                        <td id="decimaldifference">0</td>
                     </tr>
                 </table>
             </div>
