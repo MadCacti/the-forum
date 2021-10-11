@@ -91,3 +91,4 @@ Assignee | Requirements | Evidence |
 -------- | ----------- | ----------| 
 Raiden | Multiply and Divide by 2 (Shift) | [link](https://github.com/MadCacti/the-forum/commit/6a74442994f8f0f02d276cd6e0181f7df097763d) |
 Raiden | Unsigned Addition | [link](https://github.com/MadCacti/the-forum/commit/69100d66f0370c218e01b43cb8effeac3dd5a092)|
+Brian  | Extend/Switch ASCII to Unicode | [link](https://github.com/MadCacti/the-forum/commit/e177f3dcdceaf09f37f82bb4666bc44983028b2a) |
