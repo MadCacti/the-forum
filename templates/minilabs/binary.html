@@ -33,18 +33,130 @@
         }
         // setter for DOM values
         function setConversions(binary) {
-            document.getElementById('binary').innerHTML = binary;
-            // DOM assignment to Octal conversion
-            document.getElementById('octal').innerHTML = parseInt(binary, 2).toString(8);
-            // DOM assignment to Hexadecimal conversion
-            document.getElementById('hexadecimal').innerHTML = parseInt(binary, 2).toString(16);
-            // DOM assignment to Decimal conversion
-            document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
-            /* Hack: show ASCII printable character(s) for each 8 bits
-             DOM assignment by converting decimal https://www.w3schools.com/jsref/jsref_fromcharcode.asp
-             below ASCII for more ideas of where to make changes
-             */
-            document.getElementById('ascii').innerHTML = String.fromCharCode(parseInt(binary, 2));
+            //convert the binary to decimal for use in converting to others
+            var decimal = parseInt(binary,2);
+            //set the binary value
+            document.getElementById("binary").innerHTML = binary;
+            //set the octal value by converting the decimal to octal
+            document.getElementById("octal").innerHTML = decimal.toString(8);
+            document.getElementById("decimal").innerHTML = decimal;//.toString(10);
+            document.getElementById("hexadecimal").innerHTML = decimal.toString(16);
+
+            if (document.getElementById("decimal").innerHTML > 127) {
+                document.getElementById("unicode").innerHTML = String.fromCharCode(binary,2);
+                document.getElementById("ascii").innerHTML = "";
+            } else{
+                document.getElementById("unicode").innerHTML = "";
+                document.getElementById("ascii").innerHTML = String.fromCharCode(decimal);
+            }
+            //ASCII does not have actual characters for 0-32 and 127, so this displays what ASCII actually is at those values
+            switch(document.getElementById("decimal").innerHTML)
+            {
+                case '0':
+                    document.getElementById("ascii").innerHTML = "[NULL]";
+                    break;
+                case '1':
+                    document.getElementById("ascii").innerHTML = "[Start of heading]";
+                    break;
+                case '2':
+                    document.getElementById("ascii").innerHTML = "[Start of text]";
+                    break;
+                case '3':
+                    document.getElementById("ascii").innerHTML = "[End of text]";
+                    break;
+                case '4':
+                    document.getElementById("ascii").innerHTML = "[End of transmission]";
+                    break;
+                case '5':
+                    document.getElementById("ascii").innerHTML = "[Enquiry]";
+                    break;
+                case '6':
+                    document.getElementById("ascii").innerHTML = "[Acknowledge]";
+                    break;
+                case '7':
+                    document.getElementById("ascii").innerHTML = "[Bell]";
+                    break;
+                case '8':
+                    document.getElementById("ascii").innerHTML = "[Backspace]";
+                    break;
+                case '9':
+                    document.getElementById("ascii").innerHTML = "[Horizontal tab]";
+                    break;
+                case '10':
+                    document.getElementById("ascii").innerHTML = "[Line feed]";
+                    break;
+                case '11':
+                    document.getElementById("ascii").innerHTML = "[Vertical tab]";
+                    break;
+                case '12':
+                    document.getElementById("ascii").innerHTML = "[Form feed]";
+                    break;
+                case '13':
+                    document.getElementById("ascii").innerHTML = "[Carriage return]";
+                    break;
+                case '14':
+                    document.getElementById("ascii").innerHTML = "[Shift out]";
+                    break;
+                case '15':
+                    document.getElementById("ascii").innerHTML = "[Shift in]";
+                    break;
+                case '16':
+                    document.getElementById("ascii").innerHTML = "[Data link escape]";
+                    break;
+                case '17':
+                    document.getElementById("ascii").innerHTML = "[Device Control 1]";
+                    break;
+                case '18':
+                    document.getElementById("ascii").innerHTML = "[Device Control 2]";
+                    break;
+                case '19':
+                    document.getElementById("ascii").innerHTML = "[Device Control 3]";
+                    break;
+                case '20':
+                    document.getElementById("ascii").innerHTML = "[Device Control 4]";
+                    break;
+                case '21':
+                    document.getElementById("ascii").innerHTML = "[Negative acknowledge]";
+                    break;
+                case '22':
+                    document.getElementById("ascii").innerHTML = "[Synchronous idle]";
+                    break;
+                case '23':
+                    document.getElementById("ascii").innerHTML = "[Eng of trans. block]";
+                    break;
+                case '24':
+                    document.getElementById("ascii").innerHTML = "[Cancel]";
+                    break;
+                case '25':
+                    document.getElementById("ascii").innerHTML = "[End of medium]";
+                    break;
+                case '26':
+                    document.getElementById("ascii").innerHTML = "[Substitute]";
+                    break;
+                case '27':
+                    document.getElementById("ascii").innerHTML = "[Escape]";
+                    break;
+                case '28':
+                    document.getElementById("ascii").innerHTML = "[File separator]";
+                    break;
+                case '29':
+                    document.getElementById("ascii").innerHTML = "[Group separator]";
+                    break;
+                case '30':
+                    document.getElementById("ascii").innerHTML = "[Record separator]";
+                    break;
+                case '31':
+                    document.getElementById("ascii").innerHTML = "[Unit separator]";
+                    break;
+                case '32':
+                    document.getElementById("ascii").innerHTML = "[Space]";
+                    break;
+                case '127':
+                    document.getElementById("ascii").innerHTML = "[Del]";
+                    break;
+                default:
+                    break;
+            }
         }
 
         function updateImage(binary) {
@@ -165,6 +277,7 @@
                         <th>Decimal</th>
                         <!-- Hack: display ASCII label for printable character(s)  -->
                         <th>ASCII</th>
+                        <th>unicode</th>
                         <th>Minus</th>
                         <th>Divide</th>
                     </tr>
@@ -176,7 +289,8 @@
                         <td id="hexadecimal">0</td>
                         <td id="decimal">0</td>
                         <!-- Hack: display ASCII printable character(s)  -->
-                        <td id="ascii">0</td>
+                        <td id="ascii">[NULL]</td>
+                        <td id="unicode"></td>
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                         <td><button type="button" id="divide" onclick="divide(1)">/2</button></td>
                     </tr>
