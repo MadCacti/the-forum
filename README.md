@@ -92,5 +92,6 @@ Assignee | Requirements | Evidence |
 Raiden | Multiply and Divide by 2 (Shift) | [link](https://github.com/MadCacti/the-forum/commit/6a74442994f8f0f02d276cd6e0181f7df097763d) |
 Raiden | Unsigned Addition | [link](https://github.com/MadCacti/the-forum/commit/69100d66f0370c218e01b43cb8effeac3dd5a092)|
 Brian  | Extend/Switch ASCII to Unicode | [link](https://github.com/MadCacti/the-forum/commit/e177f3dcdceaf09f37f82bb4666bc44983028b2a) |
+Brian | Signed Addition | [link]https://github.com/MadCacti/the-forum/commit/bb2a39dde603d57010c8d45573463a454816b11b |
 Raiden/Jacob | Logic Gates(no pictures) | [link](https://github.com/MadCacti/the-forum/commit/a7c5c2ce15e7d30731b07afec51421e0a1da82b6) |
 Connor | Color Codes |
