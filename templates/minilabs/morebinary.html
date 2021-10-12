@@ -63,11 +63,6 @@
             document.getElementById('binarysum').innerHTML = sumBinary(binvalue,binvalue1);
         }
         function sumBinary(binvalue,binvalue1) {
-            if (binvalue[0]=="1") {
-                binvalue = "0" + binvalue.substr(1);
-                var subBinary = "1" + differenceBinary(binvalue,binvalue1).substr(1);
-                return subBinary;
-            }
              var binlen1 = binvalue.length;
              var binlen2 = binvalue1.length;
              // var max = Math.max(binlen1, binlen2);
@@ -148,11 +143,6 @@
         }
 
         function differenceBinary(binary,binary1) {
-            if (binary[0]=="1") {
-                binary = "0" + binary.substr(1);
-                var subBinary = "1" + sumBinary(binary,binary1).substr(1);
-                return subBinary;
-            }
             var binlen1 = binary.length;
             var binlen2 = binary1.length;
             // var max = Math.max(binlen1, binlen2);
