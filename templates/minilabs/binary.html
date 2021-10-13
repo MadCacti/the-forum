@@ -41,13 +41,19 @@
             document.getElementById("octal").innerHTML = decimal.toString(8);
             document.getElementById("decimal").innerHTML = decimal;//.toString(10);
             document.getElementById("hexadecimal").innerHTML = decimal.toString(16);
+            var hexvalue = decimal.toString(16);
+            var numberofloops = 4 - hexvalue.length;
+            for(let i = 0; i < numberofloops; i++){
+                hexvalue = "0" + hexvalue;
+            }
+            hexvalue = "U-" + hexvalue;
+            document.getElementById("unicode").innerHTML = hexvalue;
 
             if (document.getElementById("decimal").innerHTML > 127) {
-                document.getElementById("unicode").innerHTML = String.fromCharCode(binary,2);
                 document.getElementById("ascii").innerHTML = "";
             } else{
-                document.getElementById("unicode").innerHTML = "";
-                document.getElementById("ascii").innerHTML = String.fromCharCode(decimal);
+                document.getElementById("asci" +
+                    "i").innerHTML = String.fromCharCode(decimal);
             }
             //ASCII does not have actual characters for 0-32 and 127, so this displays what ASCII actually is at those values
             switch(document.getElementById("decimal").innerHTML)
@@ -290,7 +296,7 @@
                         <td id="decimal">0</td>
                         <!-- Hack: display ASCII printable character(s)  -->
                         <td id="ascii">[NULL]</td>
-                        <td id="unicode"></td>
+                        <td id="unicode">U-0000</td>
                         <td><button type="button" id="sub1" onclick="add(-1)">-1</button></td>
                         <td><button type="button" id="divide" onclick="divide(1)">/2</button></td>
                     </tr>

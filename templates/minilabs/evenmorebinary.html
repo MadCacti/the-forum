@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+
+<!-- Search for all the Hack: below for hack-a-thon and mini-lab requirements -->
+<!-- need to adjust Templates to start -->
+
+<!-- Hack: Build form to drive bit size dynamic updates
+           use HTML Input Form in Frontend, ie toward top of Page
+           send initial value and updated values to form via Python render_template -->
+<!-- Hack: use 8 as default -->
+{% set BITS = bits %}
+{% set MAX = ((2 ** BITS) - 1) %}
+
+<!-- Hack: Set bulbs and pass as variables via Python render_template
+           add new images (ie PNGs) to project -->
+<!-- use your PNGs as default -->
+{% set imgBulbOn = "/static/assets/bulb_on.gif" %}
+{% set imgBulbOff = "/static/assets/bulb_off.png" %}
+{% set msgTurnOn = "Turn On" %}
+{% set msgTurnOff = "Turn Off" %}
+
+{% block meta %}
+    <title>Binary page</title>
+    <script>
+        const BITS = '{{ BITS }}'; let max = '{{ MAX }}'; let MAX = parseInt(max, 10);
+        // return string with current value of each bit
+        function getBits() {
+            let bits = "";
+            for(let i = 0; i < BITS; i++) {
+                bits = bits + document.getElementById('digit' + i).value;
+            }
+            return bits;
+        }
+        function getBits1() {
+            let bits = "";
+            for(let i = 0; i < BITS; i++) {
+                bits = bits + document.getElementById('digit1' + i).value;
+            }
+            return bits;
+        }
+        // toggle selected bit and recalculate
+        function toggleBit(i) {
+            //alert("Digit action: " + i );
+            const dig = document.getElementById('digit' + i);
+            const image = document.getElementById('bulb' + i);
+            const butt = document.getElementById('butt' + i);
+            // Change digit and visual
+            if (image.src.match("{{ imgBulbOn }}")) {
+                dig.value = 0;
+                image.src = "{{ imgBulbOff }}";
+                butt.innerHTML = "{{ msgTurnOn }}";
+            } else {
+                dig.value = 1;
+                image.src = "{{ imgBulbOn }}";
+                butt.innerHTML = "{{ msgTurnOff }}";
+            }
+            // Binary numbers
+            const binary = getBits();
+            setConversions(binary);
+        }
+        function toggleBit1(i) {
+            //alert("Digit action: " + i );
+            const dig = document.getElementById('digit1' + i);
+            const image = document.getElementById('bulb1' + i);
+            const butt = document.getElementById('butt1' + i);
+            // Change digit and visual
+            if (image.src.match("{{ imgBulbOn }}")) {
+                dig.value = 0;
+                image.src = "{{ imgBulbOff }}";
+                butt.innerHTML = "{{ msgTurnOn }}";
+            } else {
+                dig.value = 1;
+                image.src = "{{ imgBulbOn }}";
+                butt.innerHTML = "{{ msgTurnOff }}";
+            }
+            // Binary numbers
+            const binary1 = getBits1();
+            setConversions1(binary1);
+        }
+        function decimalsum() {
+            const binary = getBits();
+            const binary1 = getBits1();
+            let value = parseInt(binary, 2).toString(10) - document.getElementById('digit0').value*256;
+            let value1 = parseInt(binary1, 2).toString(10) - document.getElementById('digit10').value*256;
+            let sum = Number(value) + Number(value1);
+            document.getElementById('decimalsum').innerHTML = sum;
+        }
+        function setConversions(binary) {
+            document.getElementById('binary').innerHTML = binary;
+            document.getElementById('decimal').innerHTML = parseInt(binary, 2).toString(10);
+        }
+        function setConversions1(binary1) {
+            document.getElementById('binary1').innerHTML = binary1;
+            document.getElementById('decimal1').innerHTML = parseInt(binary1, 2).toString(10);
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Binary Math with Conversions</h1>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+
+            <div class="col-8">
+                <table class="table">
+                    <tr id="table">
+                        <th>Binary</th>
+                        <th>Decimal</th>
+                        <!-- Hack: display ASCII label for printable character(s)  -->
+                    </tr>
+                    <tr>
+                        <td id="binary">00000000</td>
+                        <td id="decimal">0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-12">
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><img class="img-responsive py-3" id="bulb{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                                <button type="button" id="butt{{i}}" onclick="toggleBit('{{i}}')">{{ msgTurnOn }}</button>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><input type='text' id='digit{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
+            <div class="col-8">
+                <table class="table">
+                    <tr id="table">
+                        <th>Binary</th>
+                        <th>Decimal</th>
+                        <!-- Hack: display ASCII label for printable character(s)  -->
+                    </tr>
+                    <tr>
+                        <td id="binary1">00000000</td>
+                        <td id="decimal1">0</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="col-12">
+                <table class="table">
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><img class="img-responsive py-3" id="bulb1{{i}}" src="{{ imgBulbOff }}" alt="" width="40" height="Auto">
+                                <button type="button" id="butt1{{i}}" onclick="toggleBit1('{{i}}')">{{ msgTurnOn }}</button>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        {% for i in range(BITS) %}
+                            <td><input type='text' id='digit1{{i}}' Value="0" size="1" readonly></td>
+                        {% endfor %}
+                    </tr>
+                </table>
+            </div>
+            <div class="col-8">
+                <table class="table">
+                    <tr>
+                        <th><input type="button" value="Calculate Decimal Sum" onclick="decimalsum()"></th>
+                    </tr>
+                    <tr>
+                        <td id="decimalsum">0</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+{% block background %}
+{% endblock %}
