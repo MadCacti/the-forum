@@ -1,6 +1,6 @@
 # import "packages" from flask
 from pathlib import Path
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from algorithms.image import image_data
 
 
@@ -13,6 +13,25 @@ thisList = []
 def index():
     return render_template("index.html")
 
+@app.route('/login/', methods=["GET","POST"])
+def login():
+    if request.method == "POST":
+        attempted_username = request.form['username']
+        attempted_password = request.form['password']
+            #flash(attempted_username)
+            #flash(attempted_password)
+        if attempted_username == "admin" and attempted_password == "password":
+            return redirect('/')
+
+        else:
+            return redirect('/loginerror')
+
+    return render_template("login.html")
+
+
+@app.route('/loginerror/')
+def loginerror():
+    return render_template("loginerror.html")
 
 @app.route('/national_events/')
 def national_events():

@@ -54,6 +54,11 @@ h1 {
     background-color: var(--bgColor);
     color: var(--navTextColor);
 }
+.navbar-right{
+    position: fixed;
+    top: 10px;
+    right: 5px;/*pixels away from the right of the navbar*/
+}
 
 ul.dropdown-menu {
     background-color: #f8f9ff;
