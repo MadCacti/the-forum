@@ -37,23 +37,24 @@
             var decimal = parseInt(binary,2);
             //set the binary value
             document.getElementById("binary").innerHTML = binary;
-            //set the octal value by converting the decimal to octal
+            //find each conversion and print them
             document.getElementById("octal").innerHTML = decimal.toString(8);
             document.getElementById("decimal").innerHTML = decimal;//.toString(10);
             document.getElementById("hexadecimal").innerHTML = decimal.toString(16);
             var hexvalue = decimal.toString(16);
+            //format hexadecimal into a unicode value
             var numberofloops = 4 - hexvalue.length;
             for(let i = 0; i < numberofloops; i++){
                 hexvalue = "0" + hexvalue;
             }
             hexvalue = "U-" + hexvalue;
             document.getElementById("unicode").innerHTML = hexvalue;
+            //print ASCII value if it exists
 
             if (document.getElementById("decimal").innerHTML > 127) {
                 document.getElementById("ascii").innerHTML = "";
             } else{
-                document.getElementById("asci" +
-                    "i").innerHTML = String.fromCharCode(decimal);
+                document.getElementById("ascii").innerHTML = String.fromCharCode(decimal);
             }
             //ASCII does not have actual characters for 0-32 and 127, so this displays what ASCII actually is at those values
             switch(document.getElementById("decimal").innerHTML)

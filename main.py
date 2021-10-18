@@ -3,10 +3,11 @@ from pathlib import Path
 from flask import Flask, render_template, request
 from algorithms.image import image_data
 
+
 # create a Flask instance
 app = Flask(__name__)
 
-
+thisList = []
 # connects default URL to render index.html 
 @app.route('/')
 def index():
@@ -21,6 +22,21 @@ def national_events():
 @app.route('/international_events/')
 def international_events():
     return render_template("pages/international_events.html")
+
+@app.route('/post', methods=['GET', 'POST'])
+def post():
+    if request.form:
+        thought = request.form.get("thought")
+        thisList.append(thought)
+        if len(thought) !=0:
+            return render_template("pages/international_events.html", nickname=thisList)
+    return render_template("pages/international_events.html")
+
+@app.route('/delete', methods=['GET', 'POST'])
+def delete():
+    if len(thisList) > 0:
+        thisList.pop(len(thisList) - 1)
+    return render_template("pages/international_events.html", nickname=thisList)
 
 
 @app.route('/science_news/')

@@ -78,10 +78,13 @@
             setConversions1(binary1);
         }
         function decimalsum() {
+            //get the bits of both numbers
             const binary = getBits();
             const binary1 = getBits1();
+            //bits are being converted to decimal and 256 is being subtracted if sign bit is on
             let value = parseInt(binary, 2).toString(10) - document.getElementById('digit0').value*256;
             let value1 = parseInt(binary1, 2).toString(10) - document.getElementById('digit10').value*256;
+            //numbers are added and printed
             let sum = Number(value) + Number(value1);
             document.getElementById('decimalsum').innerHTML = sum;
         }
