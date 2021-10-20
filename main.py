@@ -2,7 +2,7 @@
 from pathlib import Path
 from flask import Flask, render_template, request, redirect
 from algorithms.image import image_data
-
+# import firebase
 
 # create a Flask instance
 app = Flask(__name__)
@@ -12,6 +12,7 @@ thisList = []
 @app.route('/')
 def index():
     return render_template("index.html")
+
 
 @app.route('/login/', methods=["GET","POST"])
 def login():

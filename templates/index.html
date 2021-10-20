@@ -1,8 +1,16 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-
+<script>
+    function randomPage() {
+        var arr = ["http://127.0.0.1:5555/international_events/", "http://127.0.0.1:5555/most_popular/", "http://127.0.0.1:5555/national_events/", "http://127.0.0.1:5555/science_news/", "http://127.0.0.1:5555/sports_news/"];
+        var value = arr[Math.floor(Math.random() * arr.length)];
+        window.location = value;     // remove the comment at the beginning to actually navigate
+    }
+</script>
     <div class="row">
         <h1 style="text-align: center;">Hi! Welcome to the Forum.</h1>
+        <p align="center">Bored? Let's go to a random topic!</p>
+        <input type="button" onclick="randomPage()" value="Let's Go!"/>
     </div>
 
 {% endblock %}

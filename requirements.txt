@@ -2,3 +2,4 @@ Flask
 numpy
 pillow
 requests
+firebase_admin
