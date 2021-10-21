@@ -1,0 +1,76 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<div class="container">
+<br>
+<h4>Please Signup:</h4>
+<br>
+<form id="formEE">
+    <br />
+    <input
+            style="text-align: center"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email"
+            class="form-control"
+    />
+    <br />
+    <input
+            style="text-align: center"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+            class="form-control"
+    />
+    <br />
+    <input
+            style="text-align: center"
+            class="btn btn-primary loginbtn"
+            type="submit"
+            value="Sign Up"
+    />
+</form>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+
+<script>
+    const config = {
+        apiKey: "AIzaSyBmT4tTLjBOEFS_6HbDwAidDJEj2SMlyxg",
+        authDomain: "the-forum-82bd6.firebaseapp.com",
+        projectId: "the-forum-82bd6",
+        storageBucket: "the-forum-82bd6.appspot.com",
+        messagingSenderId: "178589339518",
+        appId: "1:178589339518:web:6dfd987859747843e32d2f",
+        measurementId: "G-X8BJT3T4C7"
+    };
+    if (firebase.apps.length === 0) {
+        firebase.initializeApp(config);
+        console.log("worked");
+    }
+    const auth = firebase.auth();
+    var form = document.getElementById("formEE");
+    var submit = document.getElementById("submit");
+
+    form.onsubmit = function (e) {
+        e.preventDefault();
+        const email = form["email"].value;
+        const password = form["password"].value;
+        auth.createUserWithEmailAndPassword(email, password).then(function (){
+            console.log('signed up successfully')
+            window.location.pathname = '/login'
+        }).catch((err) => {
+            if (err.code === "auth/email-already-in-use") {
+                alert("Email is already in use");
+            } else if (err.code === "auth/invalid-email") {
+                alert("Email is formatted incorrectly");
+            }
+        });
+    };
+</script>
+</body>
+</div>
+{% endblock %}

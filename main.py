@@ -16,23 +16,18 @@ def index():
 
 @app.route('/login/', methods=["GET","POST"])
 def login():
-    if request.method == "POST":
-        attempted_username = request.form['username']
-        attempted_password = request.form['password']
-            #flash(attempted_username)
-            #flash(attempted_password)
-        if attempted_username == "admin" and attempted_password == "password":
-            return redirect('/')
-
-        else:
-            return redirect('/loginerror')
-
     return render_template("login.html")
 
 
-@app.route('/loginerror/')
-def loginerror():
-    return render_template("loginerror.html")
+@app.route('/signup/')
+def signup():
+    return render_template("signup.html")
+
+
+@app.route('/error/')
+def error():
+    return render_template("error.html")
+
 
 @app.route('/national_events/')
 def national_events():
@@ -43,6 +38,7 @@ def national_events():
 def international_events():
     return render_template("pages/international_events.html")
 
+
 @app.route('/post', methods=['GET', 'POST'])
 def post():
     if request.form:
@@ -51,6 +47,7 @@ def post():
         if len(thought) !=0:
             return render_template("pages/international_events.html", nickname=thisList)
     return render_template("pages/international_events.html")
+
 
 @app.route('/delete', methods=['GET', 'POST'])
 def delete():
