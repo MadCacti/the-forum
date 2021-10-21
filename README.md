@@ -10,6 +10,9 @@ Table of contents
 * [Sprint 5 Week 5](#sprint-5-week-5)
 * [Sprint 5 Week 6](#sprint-5-week-6)
 * [Sprint 7 Week 7](#Sprint-7-Week-7)
+* [Sprint 7 Week 7](#Sprint-7-Week-8)
+* [Sprint 9 Week 9](#Sprint-9-Week-9)
+
 <!--te-->
 
 Credits
@@ -95,3 +98,20 @@ Brian  | Extend/Switch ASCII to Unicode | [link](https://github.com/MadCacti/the
 Brian | Signed Addition | [link](https://github.com/MadCacti/the-forum/commit/bb2a39dde603d57010c8d45573463a454816b11b) |
 Jacob | Logic Gates(committed under raiden's account due to github problems, collab w/ aadits group) | [link](https://github.com/MadCacti/the-forum/commit/a7c5c2ce15e7d30731b07afec51421e0a1da82b6) |
 Connor | Color Codes | [link](https://github.com/MadCacti/the-forum/commit/f504425c11bb598402db9da1cc81d249a6226dba) |
+
+Sprint-7-Week-8
+===============
+Links:
+[Review Ticket for Class Presentation](https://github.com/MadCacti/the-forum/issues/13)
+[Presentation](https://docs.google.com/presentation/d/1p1Y-OaUdoYvcws4fqL_HvjwXeO28eWu7NcbF2s8BchA/edit#slide=id.p)
+
+Sprint-9-Week-9
+===============
+[Issue](https://github.com/MadCacti/the-forum/issues/14)
+Please put your own commits here please. I(Raiden) will know who really did what so don't try to copy from another one from our own team.
+Assignee | Idea/Addition | Evidence |
+-------- | ----------- | ----------| 
+Raiden | Firebase API Authentication | [link](https://github.com/MadCacti/the-forum/commit/432cba8e74d8d6ebc9af5d2bc617610ae77fb3ed) |
+Raiden | Random Webpage button w/ list | [link](https://github.com/MadCacti/the-forum/commit/3159b8dbff9275e48879788c2576a732dc48e310)|
+Brian  | Baseline commenting system | [link](https://github.com/MadCacti/the-forum/commit/41c2e55145fd545ffe82069a20fa44ee671dc803) |
+Conor | Background addition | [link](https://github.com/MadCacti/the-forum/commit/af5f7fdf9cd3ddf86af1a38a4f854c4ffc69bdaf) |
