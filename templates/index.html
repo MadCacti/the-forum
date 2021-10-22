@@ -7,12 +7,31 @@
         window.location = value;     // remove the comment at the beginning to actually navigate
     }
 </script>
+
     <div class="row">
         <h1 style="text-align: center;">Hi! Welcome to the Forum.</h1>
         <p align="center">Bored? Let's go to a random topic!</p>
         <div class="container" align="center">
         <input type="button" onclick="randomPage()" value="Let's Go!"/>
         </div>
+        <body>
+        <p>Need some quick information? Search it up!</p>
+        <form action='/results/' method="POST">
+            <input type="text" placeholder="Enter keyword term" name='keyword'>
+            <button type="submit">Get News</button>
+
+
+        </form>
+
+
+        {% for post in news %}
+        <h4>{{post['title']}}</h4>
+        <i>{{post['publishedAt']}}</i>
+        <p>{{post['description']}}</p>
+        {% endfor %}
+
+
+        </body>
     </div>
 
 {% endblock %}

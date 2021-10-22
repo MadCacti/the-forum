@@ -4,7 +4,7 @@
 <br>
 <h4>Please Signup:</h4>
 <br>
-<form id="formEE">
+<form id="register">
     <br />
     <input
             style="text-align: center"
@@ -52,7 +52,7 @@
         console.log("worked");
     }
     const auth = firebase.auth();
-    var form = document.getElementById("formEE");
+    var form = document.getElementById("register");
     var submit = document.getElementById("submit");
 
     form.onsubmit = function (e) {

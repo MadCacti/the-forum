@@ -1,17 +1,38 @@
 # import "packages" from flask
-from pathlib import Path
-from flask import Flask, render_template, request, redirect
 from algorithms.image import image_data
-# import firebase
+from flask import Flask, render_template, request
+from pathlib import Path
+import requests
+from newsapi import NewsApiClient
 
 # create a Flask instance
 app = Flask(__name__)
 
 thisList = []
-# connects default URL to render index.html 
+# connects default URL to render index.html
+
+yourAPIKEY = '8169dc4f99474483ab5999bc2c761381'   # write your API key here
+
+newsapi = NewsApiClient(api_key=yourAPIKEY)
+
 @app.route('/')
 def index():
-    return render_template("index.html")
+    #news =head_lines
+    return render_template('index.html', news='')
+
+
+@app.route('/results/', methods=['POST'])
+def get_results():
+    keyword = request.form['keyword']  #getting input from user
+
+    news = newsapi.get_top_headlines(q=keyword,
+                                     #sources='bbc-news,the-verge',#optional and you can change
+                                     #category='business', #optional and you can change also
+                                     language='en', #optional and you can change also
+                                     country='in')
+    #print(news['articles'])
+    return render_template('index.html',news=news['articles'])
+
 
 
 @app.route('/login/', methods=["GET","POST"])
