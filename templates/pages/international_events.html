@@ -21,5 +21,90 @@
     <input type="submit" value="Go!">
 </form>
 
+<table style="color:black">
+    <tr>
+        <td>
+            <select name="North America" id="North America">
+                <option value="Selected">Selected</option>
+                <option value="Deselected">Deselected</option>
+            </select>
+            North America
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="South America" id="South America">
+                <option value="Selected">Selected</option>
+                <option value="Deselected">Deselected</option>
+            </select>
+            South America
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="Europe" id="Europe">
+                <option value="Selected">Selected</option>
+                <option value="Deselected">Deselected</option>
+            </select>
+            Europe
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="Asia" id="Asia">
+                <option value="Selected">Selected</option>
+                <option value="Deselected">Deselected</option>
+            </select>
+            Asia
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="Africa" id="Africa">
+                <option value="Selected">Selected</option>
+                <option value="Deselected">Deselected</option>
+            </select>
+            Africa
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="Australia" id="Australia">
+                <option value="Selected">Selected</option>
+                <option value="Deselected">Deselected</option>
+            </select>
+            Australia
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <select name="Antarctica" id="Antarctica">
+                <option value="Selected">Selected</option>
+                <option value="Deselected">Deselected</option>
+            </select>
+            Antarctica
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button>Filter</button>
+        </td>
+    </tr>
+</table>
 
+<script>
+    var Headlines = {
+        "NorthAmerica": "Record high migrant detentions at US-Mexico border",
+        "SouthAmerica": "Blinken seeks to shore up democracy on South America trip",
+        "Europe":"Matteo Salvini: Right-wing Italy politician on trial for blocking migrant boat",
+        "Asia": "China seeks to lift homework pressures on schoolchildren",
+        "Africa":"Eswatini protests: Nurses refuse to treat police after colleagues shot",
+        "Australia": "Climate change: Why Australia refuses to give up coal",
+        "Antarctica": "Penguins: Meet the Family"
+    }
+    function displayNews() {
+
+        document.getElementById("Antarctica").value
+    }
+</script>
 {% endblock %}
