@@ -24,18 +24,18 @@
 <table style="color:black">
     <tr>
         <td>
-            <select name="North America" id="North America">
+            <select name="NorthAmerica" id="NorthAmerica">
                 <option value="Selected">Selected</option>
-                <option value="Deselected">Deselected</option>
+                <option value="Deselected" selected>Deselected</option>
             </select>
             North America
         </td>
     </tr>
     <tr>
         <td>
-            <select name="South America" id="South America">
+            <select name="SouthAmerica" id="SouthAmerica">
                 <option value="Selected">Selected</option>
-                <option value="Deselected">Deselected</option>
+                <option value="Deselected" selected>Deselected</option>
             </select>
             South America
         </td>
@@ -44,7 +44,7 @@
         <td>
             <select name="Europe" id="Europe">
                 <option value="Selected">Selected</option>
-                <option value="Deselected">Deselected</option>
+                <option value="Deselected" selected>Deselected</option>
             </select>
             Europe
         </td>
@@ -53,7 +53,7 @@
         <td>
             <select name="Asia" id="Asia">
                 <option value="Selected">Selected</option>
-                <option value="Deselected">Deselected</option>
+                <option value="Deselected" selected>Deselected</option>
             </select>
             Asia
         </td>
@@ -62,7 +62,7 @@
         <td>
             <select name="Africa" id="Africa">
                 <option value="Selected">Selected</option>
-                <option value="Deselected">Deselected</option>
+                <option value="Deselected" selected>Deselected</option>
             </select>
             Africa
         </td>
@@ -71,7 +71,7 @@
         <td>
             <select name="Australia" id="Australia">
                 <option value="Selected">Selected</option>
-                <option value="Deselected">Deselected</option>
+                <option value="Deselected" selected>Deselected</option>
             </select>
             Australia
         </td>
@@ -80,17 +80,33 @@
         <td>
             <select name="Antarctica" id="Antarctica">
                 <option value="Selected">Selected</option>
-                <option value="Deselected">Deselected</option>
+                <option value="Deselected" selected>Deselected</option>
             </select>
             Antarctica
         </td>
     </tr>
     <tr>
         <td>
-            <button>Filter</button>
+            <button onclick="displayNews()">Filter</button>
         </td>
     </tr>
 </table>
+
+<div id="NorthAmericaDisplay">
+</div>
+<div id="SouthAmericaDisplay">
+</div>
+<div id="EuropeDisplay">
+</div>
+<div id="AsiaDisplay">
+</div>
+<div id="AfricaDisplay">
+</div>
+<div id="AustraliaDisplay">
+</div>
+<div id="AntarcticaDisplay">
+</div>
+
 
 <script>
     var Headlines = {
@@ -103,8 +119,62 @@
         "Antarctica": "Penguins: Meet the Family"
     }
     function displayNews() {
-
-        document.getElementById("Antarctica").value
+        let AntarcticaSelect = false;
+        let AfricaSelect = false;
+        let NorthAmericaSelect = false;
+        let SouthAmericaSelect = false;
+        let EuropeSelect = false;
+        let AsiaSelect = false;
+        let AustraliaSelect = false;
+        if (document.getElementById("Antarctica").value=="Selected"){
+            AntarcticaSelect = true;
+        }
+        if (document.getElementById("Africa").value=="Selected"){
+            AfricaSelect = true;
+        }
+        if (document.getElementById("Asia").value=="Selected"){
+            AsiaSelect = true;
+        }
+        if (document.getElementById("Europe").value=="Selected"){
+            EuropeSelect = true;
+        }
+        if (document.getElementById("NorthAmerica").value=="Selected"){
+            NorthAmericaSelect = true;
+        }
+        if (document.getElementById("SouthAmerica").value=="Selected"){
+            SouthAmericaSelect = true;
+        }
+        if (document.getElementById("Australia").value=="Selected"){
+            AustraliaSelect = true;
+        }
+        if (AustraliaSelect){
+            document.getElementById("AustraliaDisplay").innerText=Headlines.Australia;
+        }
+        else document.getElementById("AustraliaDisplay").innerText="";
+        if (AfricaSelect){
+            document.getElementById("AfricaDisplay").innerText=Headlines.Africa;
+        }
+        else document.getElementById("AfricaDisplay").innerText="";
+        if (AsiaSelect){
+            document.getElementById("AsiaDisplay").innerText=Headlines.Asia;
+        }
+        else document.getElementById("AsiaDisplay").innerText="";
+        if (EuropeSelect){
+            document.getElementById("EuropeDisplay").innerText=Headlines.Europe;
+        }
+        else document.getElementById("EuropeDisplay").innerText="";
+        if (NorthAmericaSelect){
+            document.getElementById("NorthAmericaDisplay").innerText=Headlines.NorthAmerica;
+        }
+        else document.getElementById("NorthAmericaDisplay").innerText="";
+        if (SouthAmericaSelect){
+            document.getElementById("SouthAmericaDisplay").innerText=Headlines.SouthAmerica;
+        }
+        else document.getElementById("SouthAmericaDisplay").innerText="";
+        if (AntarcticaSelect){
+            document.getElementById("AntarcticaDisplay").innerText=Headlines.Antarctica;
+        }
+        else document.getElementById("AntarcticaDisplay").innerText="";
     }
 </script>
 {% endblock %}
