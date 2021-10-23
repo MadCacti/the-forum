@@ -38,4 +38,36 @@
         <body style="background-color:cornflowerblue"#}
     </div>
 
+<div id="Test">
+true
+</div>
+
+<button onclick="AlterValue()">
+    Toggle
+</button>
+
+
+
+<script>
+    var Test = {
+        "isThisTrue": true,
+        "CheckValue": function(){
+            return this.isThisTrue;
+        },
+        "ChangeValue": function(){
+            if (this.isThisTrue==true){
+                this.isThisTrue = false;
+            }
+            else {
+                this.isThisTrue = true;
+            }
+
+        }
+    }
+    function AlterValue () {
+        Test.ChangeValue();
+        document.getElementById("Test").innerText=Test.CheckValue();
+    }
+</script>
+
 {% endblock %}
