@@ -5,21 +5,64 @@
     <h1 style="text-align: center;">Hi! Welcome to the Forum.</h1>
 </div>
 
-<div id="post">
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            color: black;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-</div>
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
 
-<p>{{nickname}}</p>
-<form action="/post" id="publish" method="POST" >
-    <label for="thought">Post Your Thoughts</label>
-    <input name="thought" id="thought">
-    <input type="submit" value="Go!">
-</form>
+        tr:nth-child(even) {
+            /*background-color: #dddddd;*/
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
 
-<form action="/delete" id="remove" method="POST" >
-    <label>Delete Last Post</label>
-    <input type="submit" value="Go!">
-</form>
+<h2>National Events</h2>
 
+<table>
+    <tr>
+        <th>Subforums</th>
+        <!--                <th>Contact</th>-->
+        <!--                <th>Country</th>-->
+    </tr>
+    <tr>
+        <td>West</td>
+        <td>CA, CO, WY, MT, ID, UT, NV, OR, WA, AK, HI</td>
+        <td><a href={{ url_for('west') }}>Click here to see news from the west</a></td>
+    </tr>
+    <tr>
+        <td>Midwest</td>
+        <td>ND, SD, NE, KS, MO, IA, MN, WI, IL, IN, MI, OH</td>
+        <td><a href={{ url_for('mid_west') }}>Click here to see news from the midwest</a></td>
+    </tr>
+    <tr>
+        <td>Southwest</td>
+        <td>TX, OK, NM, AZ</td>
+        <td><a href={{ url_for('south_west') }}>Click here to see news from the southwest</td>
+    </tr>
+    <tr>
+        <td>Northeast</td>
+        <td>ME, MA, RI, CT, NH, VT, NY, PA, NJ, DE, MD</td>
+        <td><a href={{ url_for('north_east') }}>Click here to see news from the northeast</a></td>
+    </tr>
+    <tr>
+        <td>Southeast</td>
+        <td>WV, VA, KY, TN, NC, SC, GA, AL, MS, AR, LA, FL</td>
+        <td><a href={{ url_for('south_east') }}>Click here to see news from the southeast </a></td>
+    </tr>
+</table>
+
+</body>
 
 {% endblock %}

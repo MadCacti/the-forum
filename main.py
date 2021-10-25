@@ -11,31 +11,31 @@ app = Flask(__name__)
 thisList = []
 # connects default URL to render index.html
 
-yourAPIKEY = '8169dc4f99474483ab5999bc2c761381'   # write your API key here
+yourAPIKEY = '8169dc4f99474483ab5999bc2c761381'  # write your API key here
 
 newsapi = NewsApiClient(api_key=yourAPIKEY)
 
+
 @app.route('/')
 def index():
-    #news =head_lines
+    # news =head_lines
     return render_template('index.html', news='')
 
 
 @app.route('/results/', methods=['POST'])
 def get_results():
-    keyword = request.form['keyword']  #getting input from user
+    keyword = request.form['keyword']  # getting input from user
 
     news = newsapi.get_top_headlines(q=keyword,
-                                     #sources='bbc-news,the-verge',#optional and you can change
-                                     #category='business', #optional and you can change also
-                                     language='en', #optional and you can change also
+                                     # sources='bbc-news,the-verge',#optional and you can change
+                                     # category='business', #optional and you can change also
+                                     language='en',  # optional and you can change also
                                      country='in')
-    #print(news['articles'])
-    return render_template('index.html',news=news['articles'])
+    # print(news['articles'])
+    return render_template('index.html', news=news['articles'])
 
 
-
-@app.route('/login/', methods=["GET","POST"])
+@app.route('/login/', methods=["GET", "POST"])
 def login():
     return render_template("login.html")
 
@@ -55,6 +55,21 @@ def national_events():
     return render_template("pages/national_events.html")
 
 
+# @app.route('/north_east/')
+# def east_coast():
+#     return render_template("pages/north_east.html")
+
+
+# @app.route('/west/')
+# def west_coast():
+#     return render_template("pages/west.html")
+#
+#
+# @app.route('/mid_west/')
+# def mid_west():
+#     return render_template("pages/mid_west.html")
+
+
 @app.route('/international_events/')
 def international_events():
     return render_template("pages/international_events.html")
@@ -65,26 +80,16 @@ def post():
     if request.form:
         thought = request.form.get("thought")
         thisList.append(thought)
-    if len(thisList) !=0:
-        stringToPass=""
-        for i in range(len(thisList)):
-            stringToPass+=thisList[i]
-            stringToPass+=", "
-        return render_template("pages/sports_news.html", nickname=stringToPass)
-    return render_template("pages/sports_news.html")
+        if len(thought) != 0:
+            return render_template("pages/international_events.html", nickname=thisList)
+    return render_template("pages/international_events.html")
 
 
 @app.route('/delete', methods=['GET', 'POST'])
 def delete():
     if len(thisList) > 0:
         thisList.pop(len(thisList) - 1)
-    if len(thisList) !=0:
-        stringToPass=""
-        for i in range(len(thisList)):
-            stringToPass+=thisList[i]
-            stringToPass+=", "
-        return render_template("pages/sports_news.html", nickname=stringToPass)
-    return render_template("pages/sports_news.html")
+    return render_template("pages/international_events.html", nickname=thisList)
 
 
 @app.route('/science_news/')
@@ -92,10 +97,28 @@ def science_news():
     return render_template("pages/science_news.html")
 
 
+@app.route('/west/')
+def west():
+    return render_template("pages/west.html")
+
+@app.route('/mid_west/')
+def mid_west():
+    return render_template("pages/mid_west.html")
+
+@app.route('/south_west/')
+def south_west():
+    return render_template("pages/south_west.html")
+
+@app.route('/north_east/')
+def north_east():
+    return render_template("pages/north_east.html")
+
+@app.route('/south_east/')
+def south_east():
+    return render_template("pages/south_east.html")
+
 @app.route('/sports_news/')
 def sports_news():
-    if len(thisList) !=0:
-        return render_template("pages/sports_news.html", nickname=thisList)
     return render_template("pages/sports_news.html")
 
 
@@ -143,10 +166,10 @@ def Jacob():
         if len(name) != 0:  # input field has content
             return render_template("profiles/Jacob.html", nickname=name)
     # starting and empty input default
-    return render_template("profiles/Jacob.html", nickname="World")     
+    return render_template("profiles/Jacob.html", nickname="World")
 
 
-@app.route("/binary/", methods=['GET','POST'])
+@app.route("/binary/", methods=['GET', 'POST'])
 def binary():
     if request.form:
         bits = request.form.get("bits")
@@ -170,13 +193,16 @@ def greet():
 def rgb():
     path = Path(app.root_path) / "static" / "assets" / "images"
     return render_template('minilabs/rgb.html', images=image_data(path))
+
+
 # runs the application on the development server
 
 @app.route('/logicgates/')
 def logicgates():
     return render_template('minilabs/logicgates.html')
 
-@app.route("/morebinary/", methods=['GET','POST'])
+
+@app.route("/morebinary/", methods=['GET', 'POST'])
 def morebinary():
     if request.form:
         bits = request.form.get("bits")
@@ -186,7 +212,7 @@ def morebinary():
     return render_template("minilabs/morebinary.html", bits=8)
 
 
-@app.route("/evenmorebinary/", methods=['GET','POST'])
+@app.route("/evenmorebinary/", methods=['GET', 'POST'])
 def evenmorebinary():
     if request.form:
         bits = request.form.get("bits")
@@ -196,7 +222,7 @@ def evenmorebinary():
     return render_template("minilabs/evenmorebinary.html", bits=8)
 
 
-@app.route("/colorcodes/", methods=['GET','POST'])
+@app.route("/colorcodes/", methods=['GET', 'POST'])
 def colorcodes():
     if request.form:
         bits = request.form.get("bits")
@@ -204,6 +230,7 @@ def colorcodes():
             return render_template("minilabs/colorcodes.html", bits=int(bits))
         # starting and empty input default
     return render_template("minilabs/colorcodes.html", bits=8)
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5555)
