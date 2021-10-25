@@ -46,7 +46,24 @@ true
     Toggle
 </button>
 
+<div>
+    Ask me a question!
+</div>
 
+<select name="question" id="question">
+    <option value="hobby">What is your favorite hobby?</option>
+    <option value="color" >What is your favorite color?</option>
+    <option value="candy" >What is your favorite candy?</option>
+    <option value="sport" >What is your favorite sport?</option>
+    <option value="season" selected>What is your favorite season?</option>
+</select>
+
+<button onclick="answer()">
+    Ask
+</button>
+
+<div id="answer">
+</div>
 
 <script>
     var Test = {
@@ -67,6 +84,63 @@ true
     function AlterValue () {
         Test.ChangeValue();
         document.getElementById("Test").innerText=Test.CheckValue();
+    }
+
+    var Brian = {
+        "hobby": "Spending time with friends",
+        "color": "Blue",
+        "candy": "Ghiradelli chocolate",
+        "sport": "Tennis",
+        "season": "Winter",
+        "getHobby": function(){
+            return this.hobby;
+        },
+        "getColor": function(){
+            return this.color;
+        },
+        "getCandy": function(){
+          return this.candy;
+        },
+        "getSport": function(){
+          return this.sport;
+        },
+        "getSeason": function(){
+            return this.season;
+        },
+        "setHobby": function(newHobby){
+            this.hobby = newHobby;
+        },
+        "setColor": function(newColor){
+            this.color = newColor;
+        },
+        "setCandy": function(newCandy){
+            this.candy = newCandy;
+        },
+        "setSport": function(newSport){
+            this.sport = newSport;
+        },
+        "setSeason": function(newSeason){
+            this.season = newSeason;
+        }
+    }
+
+    function answer(){
+        let questionAsked = document.getElementById("question").value;
+        if (questionAsked=="hobby"){
+            document.getElementById("answer").innerText=Brian.getHobby();
+        }
+        else if (questionAsked=="color"){
+            document.getElementById("answer").innerText=Brian.getColor();
+        }
+        else if (questionAsked=="candy"){
+            document.getElementById("answer").innerText=Brian.getCandy();
+        }
+        else if (questionAsked=="sport"){
+            document.getElementById("answer").innerText=Brian.getSport();
+        }
+        else if (questionAsked=="season"){
+            document.getElementById("answer").innerText=Brian.getSeason();
+        }
     }
 </script>
 
