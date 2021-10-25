@@ -9,7 +9,7 @@
 
 </div>
 
-<p>{{nickname}}</p>
+<div id="postData">{{nickname}}</div>
 <form action="/post" id="publish" method="POST" >
     <label for="thought">Post Your Thoughts</label>
     <input name="thought" id="thought">
@@ -20,6 +20,5 @@
     <label>Delete Last Post</label>
     <input type="submit" value="Go!">
 </form>
-
 
 {% endblock %}

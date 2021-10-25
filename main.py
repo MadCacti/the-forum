@@ -65,16 +65,26 @@ def post():
     if request.form:
         thought = request.form.get("thought")
         thisList.append(thought)
-        if len(thought) !=0:
-            return render_template("pages/international_events.html", nickname=thisList)
-    return render_template("pages/international_events.html")
+    if len(thisList) !=0:
+        stringToPass=""
+        for i in range(len(thisList)):
+            stringToPass+=thisList[i]
+            stringToPass+=", "
+        return render_template("pages/sports_news.html", nickname=stringToPass)
+    return render_template("pages/sports_news.html")
 
 
 @app.route('/delete', methods=['GET', 'POST'])
 def delete():
     if len(thisList) > 0:
         thisList.pop(len(thisList) - 1)
-    return render_template("pages/international_events.html", nickname=thisList)
+    if len(thisList) !=0:
+        stringToPass=""
+        for i in range(len(thisList)):
+            stringToPass+=thisList[i]
+            stringToPass+=", "
+        return render_template("pages/sports_news.html", nickname=stringToPass)
+    return render_template("pages/sports_news.html")
 
 
 @app.route('/science_news/')
@@ -84,6 +94,8 @@ def science_news():
 
 @app.route('/sports_news/')
 def sports_news():
+    if len(thisList) !=0:
+        return render_template("pages/sports_news.html", nickname=thisList)
     return render_template("pages/sports_news.html")
 
 
