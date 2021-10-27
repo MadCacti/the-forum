@@ -5,12 +5,13 @@
     <h1 style="text-align: center;">Hi! Welcome to the Sports category, select what sport you want to talk about and we'll send you to it!</h1>
 </div>
 <div align="center">
-<input id="soccer" type="image" src="/static/assets/images/soccer.jpg"  width="220" height="120" onclick="sports(this.id)"  />
-<input id="baseball" type="image" src="/static/assets/images/baseball.png"  width="220" height="120" onclick="sports(this.id)" />
-<input id="football" type="image" src="/static/assets/images/football.jpg"  width="220" height="120" onclick="sports(this.id)" />
-<input id="tennis" type="image" src="/static/assets/images/tennis.jpg"  width="220" height="120" onclick="sports(this.id)"  />
-<input id="volleyball" type="image" src="/static/assets/images/volleyball.jpg"  width="220" height="120" onclick="sports(this.id)" />
-<input id="hockey" type="image" src="/static/assets/images/hockey.jpg"  width="220" height="120" onclick="sports(this.id)" />
+    <input id="soccer" type="image" src="/static/assets/images/soccer.jpg"  width="220" height="120" onclick="sports(this.id)"  />
+    <input id="baseball" type="image" src="/static/assets/images/baseball.png"  width="220" height="120" onclick="sports(this.id)" />
+    <input id="football" type="image" src="/static/assets/images/football.jpg"  width="220" height="120" onclick="sports(this.id)" />
+    <input id="tennis" type="image" src="/static/assets/images/tennis.jpg"  width="220" height="120" onclick="sports(this.id)"  />
+    <input id="volleyball" type="image" src="/static/assets/images/volleyball.jpg"  width="220" height="120" onclick="sports(this.id)" />
+    <input id="hockey" type="image" src="/static/assets/images/hockey.jpg"  width="220" height="120" onclick="sports(this.id)" />
+    <input id="other" type="image" src="/static/assets/images/other.jpg"  width="220" height="120" onclick="sports(this.id)" />
 </div>
 <script>
     function sports(clicked_id) {
@@ -31,6 +32,9 @@
         }
         if (clicked_id = hockey) {
             window.location = "http://127.0.0.1:5555/sports_news/hockey";
+        }
+        if (clicked_id = other) {
+            window.location = "http://127.0.0.1:5555/sports_news/other"
         }
     }
 </script>

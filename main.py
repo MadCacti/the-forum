@@ -117,6 +117,9 @@ def hockey():
     return render_template("pages/sports/hockey.html")
 
 
+@app.route('/sports_news/other/')
+def other():
+    return render_template("pages/sports/othersports.html")
 @app.route('/most_popular/')
 def most_popular():
     return render_template("pages/most_popular.html")
