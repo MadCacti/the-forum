@@ -1,0 +1,99 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<div class="row">
+    <h1 style="text-align: center; color: white;">Hi! Welcome to the Southeast</h1>
+</div>
+<!--Start of new code -->
+<!--Added one input box and one submit button for comments. Added one buttons for delete comments -->
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+
+<body>
+<!-- Added westcoast.jpg as background for this page -->
+<style>
+    body {
+        background-image: url('../../static/assets/images/southeast.jpg');
+        background-repeat: no-repeat;
+    }
+
+</style>
+<!-- end of the backgournd  -->
+
+<div class="info">
+    <!--input box for enter comment and submit to save comments in web local storage -->
+    <label style="color: white"; for="comment">Please enter your comment:
+    </label>
+    <input id="comment" type="text"
+           name="Ntext" size="20">
+    <input id="sent" type="submit"
+           value="Send">
+
+    <!--Added button to delete comments from web local storage -->
+    <br>
+    <br>
+    <label style="color: white"; for="comment">Delete your comment:
+    </label>
+
+    <input id="delete" type="submit"
+           value="Delete">
+</div>
+<br>
+<br>
+<p id="para" style="color:white">
+    <!--    <div id="feedControl">Loading...</div>-->
+</p>
+</body>
+
+<script>
+
+    if (typeof(Storage) != "undefined") {
+        //retrieve the comment from web local storage
+        document.getElementById("para").innerHTML = localStorage.getItem("lastpost_southeast");
+    }
+    else {
+        document.getElementById("para").innerHTML = "Sorry, your browser does not support Web Storage...";
+    }
+
+    window.onclick = function(e)
+    {   var id =  e.target.id;
+        if (id === 'sent') //if the send button for enter comment is clicked then do something below.
+        {
+            var txt = document.getElementById('comment').value;  //Get the text from input box for enter comment
+            var dt = new Date();  //Get the date, time when input the comment
+            if( document.getElementById("para").innerHTML.length == 0 ) //If the comment is empty concatenate the date with comment
+            {
+                txt = dt + ":" + "<br>" + txt + "<br>";
+            }
+            else  //if the comment is not empty, say, thre is already one comment there, append the new comment to the old ones.
+            {
+                txt = document.getElementById("para").innerHTML + dt + ":" + "<br>" + txt + "<br>";
+            }
+
+            // Check browser support
+            if (typeof(Storage) != "undefined") {
+                // Store the comment to the web local storage
+                localStorage.setItem("lastpost_southeast", txt );
+                // Retrieve the stored comment from the web local storage and show it on webpage.
+                document.getElementById("para").innerHTML = localStorage.getItem("lastpost_southeast");
+            }
+            else {
+                document.getElementById("para").innerHTML = "Sorry, your browser does not support Web Storage...";
+            }
+        }
+        else if( id == 'delete') //when clicking the delete button, clear the web local storage
+        {
+            // localStorage.clear();
+            localStorage.removeItem("lastpost_southeast");
+            document.getElementById("para").innerHTML = localStorage.getItem("lastpost_southeast");
+        }
+    }
+</script>
+
+<!--<div id="body">-->
+<!--    <div id="feedControl">Loading...</div>-->
+<!--</div>-->
+<!--End of new code -->
+{% endblock %}
