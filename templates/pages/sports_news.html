@@ -2,24 +2,37 @@
 {% block content %}
 
 <div class="row">
-    <h1 style="text-align: center;">Hi! Welcome to the Forum.</h1>
+    <h1 style="text-align: center;">Hi! Welcome to the Sports category, select what sport you want to talk about and we'll send you to it!</h1>
 </div>
-
-<div id="post">
-
+<div align="center">
+<input id="soccer" type="image" src="/static/assets/images/soccer.jpg"  width="220" height="120" onclick="sports(this.id)"  />
+<input id="baseball" type="image" src="/static/assets/images/baseball.png"  width="220" height="120" onclick="sports(this.id)" />
+<input id="football" type="image" src="/static/assets/images/football.jpg"  width="220" height="120" onclick="sports(this.id)" />
+<input id="tennis" type="image" src="/static/assets/images/tennis.jpg"  width="220" height="120" onclick="sports(this.id)"  />
+<input id="volleyball" type="image" src="/static/assets/images/volleyball.jpg"  width="220" height="120" onclick="sports(this.id)" />
+<input id="hockey" type="image" src="/static/assets/images/hockey.jpg"  width="220" height="120" onclick="sports(this.id)" />
 </div>
-
-<p>{{nickname}}</p>
-<form action="/post" id="publish" method="POST" >
-    <label for="thought">Post Your Thoughts</label>
-    <input name="thought" id="thought">
-    <input type="submit" value="Go!">
-</form>
-
-<form action="/delete" id="remove" method="POST" >
-    <label>Delete Last Post</label>
-    <input type="submit" value="Go!">
-</form>
-
+<script>
+    function sports(clicked_id) {
+        if (clicked_id = soccer) {
+            window.location = "http://127.0.0.1:5555/sports_news/soccer";
+        }
+        if (clicked_id = baseball) {
+            window.location = "http://127.0.0.1:5555/sports_news/baseball";
+        }
+        if (clicked_id = football) {
+            window.location = "http://127.0.0.1:5555/sports_news/football";
+        }
+        if (clicked_id = tennis) {
+            window.location = "http://127.0.0.1:5555/sports_news/tennis";
+        }
+        if (clicked_id = volleyball) {
+            window.location = "http://127.0.0.1:5555/sports_news/volleyball";
+        }
+        if (clicked_id = hockey) {
+            window.location = "http://127.0.0.1:5555/sports_news/hockey";
+        }
+    }
+</script>
 
 {% endblock %}

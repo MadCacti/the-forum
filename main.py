@@ -87,6 +87,36 @@ def sports_news():
     return render_template("pages/sports_news.html")
 
 
+@app.route('/sports_news/soccer/')
+def soccer():
+    return render_template("pages/sports/soccer.html")
+
+
+@app.route('/sports_news/baseball/')
+def baseball():
+    return render_template("pages/sports/baseball.html")
+
+
+@app.route('/sports_news/football/')
+def football():
+    return render_template("pages/sports/football.html")
+
+
+@app.route('/sports_news/tennis/')
+def tennis():
+    return render_template("pages/sports/tennis.html")
+
+
+@app.route('/sports_news/volleyball/')
+def volleyball():
+    return render_template("pages/sports/volleyball.html")
+
+
+@app.route('/sports_news/hockey/')
+def hockey():
+    return render_template("pages/sports/hockey.html")
+
+
 @app.route('/most_popular/')
 def most_popular():
     return render_template("pages/most_popular.html")
@@ -160,9 +190,11 @@ def rgb():
     return render_template('minilabs/rgb.html', images=image_data(path))
 # runs the application on the development server
 
+
 @app.route('/logicgates/')
 def logicgates():
     return render_template('minilabs/logicgates.html')
+
 
 @app.route("/morebinary/", methods=['GET','POST'])
 def morebinary():
@@ -192,6 +224,7 @@ def colorcodes():
             return render_template("minilabs/colorcodes.html", bits=int(bits))
         # starting and empty input default
     return render_template("minilabs/colorcodes.html", bits=8)
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5555)
