@@ -5,7 +5,7 @@
     <h1 style="text-align: center; color: white;">Hi! Welcome to the West</h1>
 </div>
 <!--Start of new code -->
-<!--Added one input box and one submit button for comments. Added one buttons for delete comments -->
+<!--Added one input box and one submit button for comments. Added one button for deleting comments -->
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
@@ -21,7 +21,7 @@
     }
 
 </style>
-<!-- end of the backgournd  -->
+<!-- end of the background  -->
 
 <div class="info">
     <!--input box for enter comment and submit to save comments in web local storage -->
@@ -62,7 +62,7 @@
     {
         // displayNews();
         var id =  e.target.id;
-        if (id === 'sent') //if the send button for enter comment is clicked then do something below.
+        if (id === 'sent') //if the send button for entering comment is clicked then do something below.
         {
             var txt = document.getElementById('comment').value;  //Get the text from input box for enter comment
             var dt = new Date();  //Get the date, time when input the comment
@@ -70,7 +70,7 @@
             {
                 txt = dt + ":" + "<br>" + txt + "<br>";
             }
-            else  //if the comment is not empty, say, thre is already one comment there, append the new comment to the old ones.
+            else  //if the comment is not empty, e.g. if there is already one comment there, append the new comment to the old ones.
             {
                 txt = document.getElementById("para").innerHTML + dt + ":" + "<br>" + txt + "<br>";
             }

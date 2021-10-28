@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8e04888-9a88-4435-9e0d-5fd43c4d7a70" name="Changes" comment="Implement for loops for posting system">
-      <change afterPath="$PROJECT_DIR$/templates/pages/mid_west.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/north_east.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/south_east.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/south_west.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/west.html" afterDir="false" />
+    <list default="true" id="e8e04888-9a88-4435-9e0d-5fd43c4d7a70" name="Changes" comment="created subforums under national events and posting system where comments are saved to local storage">
+      <change afterPath="$PROJECT_DIR$/static/assets/images/eastcoast.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/midwest.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/milky_way.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/southeast.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/southwest_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/assets/images/westcoast.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/national_events.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/national_events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/west.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/west.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profiles/Connor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/Connor.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +137,9 @@
       <workItem from="1632430540105" duration="11977000" />
       <workItem from="1632948723558" duration="317000" />
       <workItem from="1633382333620" duration="40590000" />
+      <workItem from="1635372070009" duration="52000" />
+      <workItem from="1635455119783" duration="1290000" />
+      <workItem from="1635456440958" duration="478000" />
     </task>
     <task id="LOCAL-00001" summary="Made image rotate">
       <created>1632433796766</created>
@@ -342,7 +347,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/the_forum$IdeaProjects.coverage" NAME="IdeaProjects Coverage Results" MODIFIED="1633985809064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/the_forum$main.coverage" NAME="main Coverage Results" MODIFIED="1635139245196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/the_forum$main.coverage" NAME="main Coverage Results" MODIFIED="1635456893908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IdeaProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1633126818019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IdeaProjectsTest2$main.coverage" NAME="main Coverage Results" MODIFIED="1632804605368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/the_forum$test.coverage" NAME="test Coverage Results" MODIFIED="1633721224033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
