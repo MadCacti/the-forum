@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e8e04888-9a88-4435-9e0d-5fd43c4d7a70" name="Changes" comment="changed text color in connor's personal page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/profiles/Connor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profiles/Connor.html" afterDir="false" />
-    </list>
+    <list default="true" id="e8e04888-9a88-4435-9e0d-5fd43c4d7a70" name="Changes" comment="added question with dropdown in connor's about me" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +130,7 @@
       <workItem from="1635455119783" duration="1290000" />
       <workItem from="1635456440958" duration="478000" />
       <workItem from="1635456945400" duration="1393000" />
-      <workItem from="1635543470615" duration="688000" />
+      <workItem from="1635543470615" duration="998000" />
     </task>
     <task id="LOCAL-00001" summary="Made image rotate">
       <created>1632433796766</created>
@@ -303,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1635457071986</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="added question with dropdown in connor's about me">
+      <created>1635544459853</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1635544459854</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,11 +349,12 @@
     <MESSAGE value="Implement questions about myself" />
     <MESSAGE value="Implement for loops for posting system" />
     <MESSAGE value="changed text color in connor's personal page" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed text color in connor's personal page" />
+    <MESSAGE value="added question with dropdown in connor's about me" />
+    <option name="LAST_COMMIT_MESSAGE" value="added question with dropdown in connor's about me" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/the_forum$IdeaProjects.coverage" NAME="IdeaProjects Coverage Results" MODIFIED="1633985809064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/the_forum$main.coverage" NAME="main Coverage Results" MODIFIED="1635544157082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/the_forum$main.coverage" NAME="main Coverage Results" MODIFIED="1635544354698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IdeaProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1633126818019" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/IdeaProjectsTest2$main.coverage" NAME="main Coverage Results" MODIFIED="1632804605368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/the_forum$test.coverage" NAME="test Coverage Results" MODIFIED="1633721224033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
