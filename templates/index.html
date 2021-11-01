@@ -1,34 +1,6 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
 
-<!-- Add Firebase products that you want to use -->
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
-
-<script>
-    const config = {
-        apiKey: "AIzaSyBmT4tTLjBOEFS_6HbDwAidDJEj2SMlyxg",
-        authDomain: "the-forum-82bd6.firebaseapp.com",
-        projectId: "the-forum-82bd6",
-        storageBucket: "the-forum-82bd6.appspot.com",
-        messagingSenderId: "178589339518",
-        appId: "1:178589339518:web:6dfd987859747843e32d2f",
-    };
-    if (firebase.apps.length === 0) {
-        firebase.initializeApp(config);
-    }
-    const auth = firebase.auth();
-    auth.onAuthStateChanged(function(user) {
-
-        if (user) {
-            alert("signed in");
-        } else {
-            window.location.pathname = "/login";
-        }
-
-    });
-</script>
 <script>
     function randomPage() {
         var arr = ["http://127.0.0.1:5555/international_events/", "http://127.0.0.1:5555/most_popular/", "http://127.0.0.1:5555/national_events/", "http://127.0.0.1:5555/science_news/", "http://127.0.0.1:5555/sports_news/"];
