@@ -4,6 +4,8 @@ from flask import Flask, render_template, request
 from pathlib import Path
 import requests
 from newsapi import NewsApiClient
+from api.webapi import api_bp
+from starter.starter import app_starter
 
 # create a Flask instance
 app = Flask(__name__)
@@ -239,6 +241,8 @@ def colorcodes():
         # starting and empty input default
     return render_template("minilabs/colorcodes.html", bits=8)
 
+app.register_blueprint(api_bp)
+app.register_blueprint(app_starter)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5555)

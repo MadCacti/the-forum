@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends "layouts/base.html" %}
+{% block content %}
+
+<body>
+<div class="container" style="margin: 2% 5% 5%; font-family: cursive; font-size: larger;">
+    <div class="center-block">
+        <div class="col-12" style="text-align: center;">
+            <h1><strong>Random event</strong></h1>
+            <!-- call the event() in the starter.py again to refresh -->
+            <form action={{url_for('starter.event')}}>
+                <button>Refresh!</button>
+            </form>
+        </div>
+
+
+        <!-- Input and Content -->
+        <div class="jumbotron text-left row">
+            <div class="col-md">
+                <!--display the json response for an event, which is inside the pass-in parameter, event -->
+                <p class="setup"><strong>{{event.event}}</strong></p>
+            </div>
+        </div>
+
+    </div>
+    <table style="margin: 1px; text-align: left">
+        <tr>
+            <th>JSON Data</th>
+        </tr>
+        <tr>
+            <!-- display the JSON data get from the input event in starter.event()-->
+            <td>{{event}}</td>
+        </tr>
+    </table>
+</div>
+</body>
+
+{% endblock %}
