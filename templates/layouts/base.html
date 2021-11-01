@@ -16,6 +16,7 @@
     body {
         background-image: url('../../../static/assets/images/newsbackground_1.jpg');
         background-repeat: repeat-y;
+        background-size: cover;
     }
 </style>
 <embed src="/static/assets/driftingaway.mp3" loop="true" autostart="true" width="2" height="0">
@@ -67,6 +68,17 @@
                 <li><a class="dropdown-item" href={{ url_for('national_events') }}>National Events</a></li>
                 <li><a class="dropdown-item" href={{ url_for('science_news') }}>Science News</a></li>
                 <li><a class="dropdown-item" href={{ url_for('sports_news') }}>Sports News</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- Added one dropdown menu, View Events -->
+    <ul class="nav navbar-nav mr-auto">
+        <li class="nav-item navbar-text">
+        <li class="nav-item dropdown navbar-text">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">View Events</a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href={{ url_for('starter.event') }}>View an event</a></li>
+                <li><a class="dropdown-item" href={{ url_for('starter.events') }}>View more events</a></li>
             </ul>
         </li>
     </ul>
