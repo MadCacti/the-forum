@@ -29,9 +29,16 @@
                 style="text-align: center"
                 class="btn btn-primary loginbtn"
                 type="submit"
-                value="Sign Up"
+                value="Login"
         />
     </form>
+    <input
+            style="text-align: center"
+            class="btn btn-primary loginbtn"
+            type="submit"
+            onclick="redirect()"
+            value="Don't have a account? Register!"
+    />
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
 
     <!-- Add Firebase products that you want to use -->
@@ -71,6 +78,9 @@
                 }
             });
         };
+        function redirect() {
+            window.location.pathname = "/signup/"
+        }
     </script>
 </div>
 {% endblock %}

@@ -15,7 +15,8 @@
 <style>
     body {
         background-image: url('../../../static/assets/images/newsbackground_1.jpg');
-        background-repeat: repeat-y;
+        background-attachment: scroll;
+        
         background-size: cover;
     }
 </style>
@@ -60,7 +61,7 @@
     </ul>
     <ul class="nav navbar-nav mr-auto">
         <li class="nav-item navbar-text">
-        <li class="nav-item dropdown navbar-text">
+        <li class="nav-item dropdown navbar-text" id="homeBody">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">Topics</a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 <li><a class="dropdown-item" href={{ url_for('most_popular') }}>Most Popular</a></li>
@@ -89,7 +90,7 @@
     </ul>
     <ul class="navbar-nav navbar-right" style="margin-right: 5em">
         <li class="nav-item navbar-text">
-            <a class="nav-link" href={{ url_for('signup') }}>Signup</a>
+            <a class="nav-link" href={{ url_for('signup') }}>Register</a>
         </li>
     </ul>
 </nav>
