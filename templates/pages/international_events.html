@@ -107,15 +107,25 @@
 <div id="AntarcticaDisplay">
 </div>
 
+<!--<div id="woeign">-->
+<!--    {% for continent in news %}-->
+<!--    {% for post in news[continent] %}-->
+<!--    <h4>{{post['title']}}</h4>-->
+<!--    <i>{{post['publishedAt']}}</i>-->
+<!--    <p>{{post['description']}}</p>-->
+<!--    {% endfor %}-->
+<!--    {% endfor %}-->
+<!--</div>-->
 
 <script>
+    console.log("{{news['Asia'][0]['title']}}");
     var Headlines = {
-        "NorthAmerica": "Record high migrant detentions at US-Mexico border",
+        "NorthAmerica": "{{news['NorthAmerica'][0]['title']}}",
         "SouthAmerica": "Blinken seeks to shore up democracy on South America trip",
-        "Europe":"Matteo Salvini: Right-wing Italy politician on trial for blocking migrant boat",
-        "Asia": "China seeks to lift homework pressures on schoolchildren",
+        "Europe":"{{news['Europe'][0]['title']}}",
+        "Asia": "{{news['Asia'][0]['title']}}",
         "Africa":"Eswatini protests: Nurses refuse to treat police after colleagues shot",
-        "Australia": "Climate change: Why Australia refuses to give up coal",
+        "Australia": "{{news['Australia'][0]['title']}}",
         "Antarctica": "Penguins: Meet the Family"
     }
     function displayNews() {
