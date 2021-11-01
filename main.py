@@ -57,7 +57,15 @@ def national_events():
 
 @app.route('/international_events/')
 def international_events():
-    return render_template("pages/international_events.html")
+    news = {}
+    news["NorthAmerica"] = newsapi.get_top_headlines(q="America")['articles']
+    news["SouthAmerica"] = newsapi.get_top_headlines(q="South America")['articles']
+    news["Asia"] = newsapi.get_top_headlines(q="China")['articles']
+    news["Europe"]= newsapi.get_top_headlines(q="Europe")['articles']
+    news["Africa"]= newsapi.get_top_headlines(q="Africa")['articles']
+    news["Australia"] = newsapi.get_top_headlines(q="Zealand")['articles']
+    news["Antarctica"] = newsapi.get_top_headlines(q="Antarctica")['articles']
+    return render_template("pages/international_events.html", news=news)
 
 
 @app.route('/post', methods=['GET', 'POST'])
