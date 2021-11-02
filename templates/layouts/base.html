@@ -54,7 +54,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-custom ">
 
-    <a class="navbar-brand" style="margin-left: 1em;">The Forum</a>
+    <a class="navbar-brand" style="margin-left: 1em;" href={{ url_for('index') }}>The Forum</a>
     <title class>The Forum</title>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -62,9 +62,6 @@
 
 
     <ul class="nav navbar-nav mr-auto">
-        <li class="nav-item navbar-text">
-            <a class="nav-link" href={{ url_for('index') }}>Home</a>
-        </li>
         <li class="nav-item dropdown navbar-text">
             <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1" type="button">About Us</a>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -123,7 +120,7 @@
             <a class="nav-link" href={{ url_for('login') }}>Login</a>
         </li>
     </ul>
-    <ul class="navbar-nav navbar-right" style="margin-right: 9em">
+    <ul class="navbar-nav navbar-right" style="margin-right: 8em">
         <li class="nav-item navbar-text">
             <a class="nav-link" href={{ url_for('signup') }}>Register</a>
         </li>
