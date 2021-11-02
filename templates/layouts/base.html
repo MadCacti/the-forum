@@ -28,12 +28,14 @@
         auth.onAuthStateChanged(function(user) {
 
             if (user) {
-                alert("signed in");
             } else {
                 window.location.pathname = "/login";
             }
 
         });
+        function logout() {
+            auth.signOut();
+        }
         </script>
     {% block meta %}{% endblock %}
 </head>
@@ -113,10 +115,15 @@
     </ul>
     <ul class="navbar-nav navbar-right" style="margin-right: 1em;">
         <li class="nav-item navbar-text">
+            <a class="nav-link" onclick="logout()">Logout</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-right" style="margin-right: 5em;">
+        <li class="nav-item navbar-text">
             <a class="nav-link" href={{ url_for('login') }}>Login</a>
         </li>
     </ul>
-    <ul class="navbar-nav navbar-right" style="margin-right: 5em">
+    <ul class="navbar-nav navbar-right" style="margin-right: 9em">
         <li class="nav-item navbar-text">
             <a class="nav-link" href={{ url_for('signup') }}>Register</a>
         </li>
