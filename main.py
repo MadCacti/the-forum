@@ -104,7 +104,10 @@ def delete():
 
 @app.route('/science_news/')
 def science_news():
-    return render_template("pages/science_news.html")
+    news = {}
+    news["Health"] = newsapi.get_top_headlines(q="Health")['articles']
+    news["Science"] = newsapi.get_top_headlines(q="Science")['articles']
+    return render_template("pages/science_news.html", news=news)
 
 
 @app.route('/west/')

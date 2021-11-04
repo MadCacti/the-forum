@@ -21,6 +21,10 @@
     <input type="submit" value="Go!">
 </form>
 
+<div id="HealthDisplay">
+</div>
+<div id="ScienceDisplay">
+</div>
 <div id="PhysicsDisplay">
 </div>
 <div id="ChemistryDisplay">
@@ -30,10 +34,14 @@
 
 <script>
     var Developments = {
+        "Health": "{{news['Health'][0]['title']}}",
+        "Science": "{{news['Science'][0]['title']}}",
         "Physics": "Physics: Muons: 'Strong' evidence found for a new force of nature",
         "Chemistry": "Chemistry: Chemistry Nobel awarded for mirror-image molecules",
         "Biology": "Biology: AI breakthrough could spark medical revolution",
     };
+    document.getElementById("HealthDisplay").innerText=Developments.Health;
+    document.getElementById("ScienceDisplay").innerText=Developments.Science;
     document.getElementById("PhysicsDisplay").innerText=Developments.Physics;
     document.getElementById("ChemistryDisplay").innerText=Developments.Chemistry;
     document.getElementById("BiologyDisplay").innerText=Developments.Biology;
