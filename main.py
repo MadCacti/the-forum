@@ -82,6 +82,7 @@ def international_events():
     news["Africa"]= newsapi.get_top_headlines(q="Africa")['articles']
     news["Australia"] = newsapi.get_top_headlines(q="Zealand")['articles']
     news["Antarctica"] = newsapi.get_top_headlines(q="Antarctica")['articles']
+    print(news['NorthAmerica'])
     return render_template("pages/international_events.html", news=news)
 
 
