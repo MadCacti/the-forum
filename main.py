@@ -9,8 +9,8 @@ from starter.starter import app_starter
 import firebase_admin
 from firebase_admin import credentials
 
-cred = credentials.Certificate("static/assets/the-forum-82bd6-firebase-adminsdk-4y6ls-6662d615ea.json")
-firebase_admin.initialize_app(cred)
+# cred = credentials.Certificate("static/assets/the-forum-82bd6-firebase-adminsdk-4y6ls-6662d615ea.json")
+# firebase_admin.initialize_app(cred)
 
 # create a Flask instance
 app = Flask(__name__)
