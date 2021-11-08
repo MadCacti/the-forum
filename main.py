@@ -3,9 +3,14 @@ from algorithms.image import image_data
 from flask import Flask, render_template, request
 from pathlib import Path
 import requests
-from newsapi import NewsApiClient
+from newsapi.newsapi_client import NewsApiClient
 from api.webapi import api_bp
 from starter.starter import app_starter
+import firebase_admin
+from firebase_admin import credentials
+
+cred = credentials.Certificate("static/assets/the-forum-82bd6-firebase-adminsdk-4y6ls-6662d615ea.json")
+firebase_admin.initialize_app(cred)
 
 # create a Flask instance
 app = Flask(__name__)
@@ -74,7 +79,7 @@ def national_events():
 
 @app.route('/international_events/')
 def international_events():
-    news = {}
+    # news = {}
     news["NorthAmerica"] = newsapi.get_top_headlines(q="America")['articles']
     news["SouthAmerica"] = newsapi.get_top_headlines(q="South America")['articles']
     news["Asia"] = newsapi.get_top_headlines(q="China")['articles']
