@@ -3,3 +3,5 @@ numpy
 pillow
 requests
 firebase_admin
+newsapi
+newsapi-python
