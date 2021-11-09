@@ -197,6 +197,30 @@ def binary():
         # starting and empty input default
     return render_template("minilabs/binary.html", bits=8)
 
+@app.route('/experience_rating/')
+def experience_rating():
+    return render_template("pages/experience_rating.html")
+
+@app.route('/five_stars/')
+def five_stars():
+    return render_template("pages/five_stars.html")
+
+@app.route('/four_stars/')
+def four_stars():
+    return render_template("pages/four_stars.html")
+
+@app.route('/three_stars/')
+def three_stars():
+    return render_template("pages/three_stars.html")
+
+@app.route('/two_stars/')
+def two_stars():
+    return render_template("pages/two_stars.html")
+
+@app.route('/one_stars/')
+def one_stars():
+    return render_template("pages/one_stars.html")
+
 
 @app.route('/greet', methods=['GET', 'Post'])
 def greet():
